@@ -22,10 +22,10 @@
         </description>
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
-        <spotlight>
-            <a href="important.topic" type="account" summary="This overrides the card summary of the topic">Custom card title</a>
-            <a href="another-important.topic" type="search" summary="This overrides the card summary of the topic">Another custom title</a>
-        </spotlight>
+<!--        <spotlight>-->
+<!--            <a href="important.topic" type="account" summary="This overrides the card summary of the topic">Custom card title</a>-->
+<!--            <a href="another-important.topic" type="search" summary="This overrides the card summary of the topic">Another custom title</a>-->
+<!--        </spotlight>-->
 
         <!--    Add several topics that are most important for this section.    -->
         <primary>
