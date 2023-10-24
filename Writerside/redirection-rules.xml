@@ -26,4 +26,8 @@
         <description>Created after removal of "Abstract Class" from SCADA帮助文档</description>
         <accepts>基础虚类.html</accepts>
     </rule>
+    <rule id="6876ee8f">
+        <description>Created after removal of "How to" from SCADA帮助文档</description>
+        <accepts>How-to.html</accepts>
+    </rule>
 </rules>
