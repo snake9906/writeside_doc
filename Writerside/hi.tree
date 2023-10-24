@@ -2,7 +2,7 @@
 <!DOCTYPE instance-profile
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
-<instance-profile id="scada helper"
+<instance-profile id="hi"
                  name="SCADA帮助文档"
                  start-page="Default-topic.md">
 
