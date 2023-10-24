@@ -18,7 +18,6 @@
     </toc-element>
     <toc-element topic="Overview.md"/>
     <toc-element topic="Reference.md"/>
-    <toc-element topic="Section-Starting-Page.topic"/>
     <toc-element topic="Database-Model-Starting-Page.topic"/>
     <toc-element topic="Default-topic.md"/>
 </instance-profile>

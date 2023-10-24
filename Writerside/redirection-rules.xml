@@ -30,4 +30,8 @@
         <description>Created after removal of "How to" from SCADA帮助文档</description>
         <accepts>How-to.html</accepts>
     </rule>
+    <rule id="2a59564a">
+        <description>Created after removal of "Section Starting Page" from SCADA帮助文档</description>
+        <accepts>Section-Starting-Page.html</accepts>
+    </rule>
 </rules>
