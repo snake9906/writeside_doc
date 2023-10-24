@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="6cad95e5">
+        <description>Created after removal of "Starter" from Help Instance</description>
+        <accepts>Starter.html</accepts>
+    </rule>
+    <rule id="7801045b">
+        <description>Created after removal of "基础虚类" from SCADA帮助文档</description>
+        <accepts>核心模型.html</accepts>
+    </rule>
+    <rule id="ea741c">
+        <description>Created after removal of "属性基本类型" from SCADA帮助文档</description>
+        <accepts>属性基本类型.html</accepts>
+    </rule>
+    <rule id="688af593">
+        <description>Created after removal of "Acquisition Model" from SCADA帮助文档</description>
+        <accepts>采集模型.html</accepts>
+    </rule>
+    <rule id="f169560">
+        <description>Created after removal of "Abstract Class" from SCADA帮助文档</description>
+        <accepts>基础虚类.html</accepts>
+    </rule>
+</rules>
