@@ -1,3 +1,2 @@
-# Attribute Introduce
+# 数据库属性介绍
 
-Start typing here...

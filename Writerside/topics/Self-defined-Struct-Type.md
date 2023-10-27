@@ -1,4 +1,4 @@
-# Self-defined Struct Type
+# 自定义结构体
 
 SCADA扩展的结构体如下：
 

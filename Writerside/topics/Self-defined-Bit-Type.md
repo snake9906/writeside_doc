@@ -1,4 +1,4 @@
-# Self-defined Bit Type
+# 自定义Bit位
 
 SCADA扩展的位域如下：
 
@@ -21,7 +21,7 @@ SCADA扩展的位域如下：
 | TESTING       | 测试中  |
 | DEFECT        | 有缺陷  |
 
-#### RunningStatus
+#### PrimaryEquipmentStatus
 
 一次设备运行状态
 
@@ -43,6 +43,7 @@ SCADA扩展的位域如下：
 | UNBV        | 并列电压不平衡 |
 | UNPQI       | PQI不匹配  |
 | UNSA        | 遥信遥测不匹配 |
+| TPINCON     | 三相位置不一致 |
 
 #### Position
 
@@ -77,3 +78,48 @@ SCADA扩展的位域如下：
 | SOURCE           | 是否替代  |
 | TEST             | 测试    |    
 | OPERATOR_BLOCKED | 闭锁刷新  |
+
+#### TopColor
+
+拓扑信息
+
+| 名称             | 别名     |
+|----------------|--------|
+| TRACED         | 已搜索    |
+| LAST_ENERGIZED | 上次是否带电 |
+| ENERGIZED      | 是否带电   |
+| GROUNDED       | 接地     |
+| TAG_GROUNDED   | 挂牌接地   |
+| MAIN_ISLAND    | 主岛     |
+| ISLAND2        | 岛2     |
+| ISLAND3        | 岛3     |
+| ISLAND4        | 岛4     |    
+| OTHER_ISLAND   | 其他岛    |
+
+#### MeasQuality
+
+测点质量位
+
+| 名称         | 别名    | 说明             |
+|------------|-------|----------------|
+| UNINIT     | 未初始化  | 前置未上送过数据       |
+| ACQ_ERR    | 采集中断  | 前置通讯中断         |
+| SUSPICIOUS | 可疑数据  |                |
+| OLD_DATA   | 数据不刷新 | 在定义的周期内未收到前置数据 |
+| BYPASS     | 旁路代   |                |
+| OPPO       | 对端代   |                |    
+| UNREASON   | 越合理限值 |                |
+
+#### AnalogMoniStatus
+
+模拟量越限状态
+
+| 名称      | 别名    |
+|---------|-------|
+| NORMAL  | 正常    |
+| OVER_L1 | 越下限   |
+| OVER_L2 | 越下下限  |
+| OVER_L3 | 越下下下限 |
+| OVER_H1 | 越上限   |
+| OVER_H2 | 越上上限  |
+| OVER_H3 | 越上上上限 |
