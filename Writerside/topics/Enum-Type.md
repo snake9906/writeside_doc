@@ -119,3 +119,155 @@ SCADA定义的枚举类型如下：
 | `CART`   | 小车   |
 | `BYPASS` | 旁路刀闸 |
 | `GROUND` | 接地刀闸 |
+
+#### BreakerType
+
+开关类型
+
+| 一级枚举       | 备注         |
+|------------|------------|
+| `COMM`     | 普通开关       |
+| `BUS_CONN` | 母联开关       |
+| `BYPASS`   | 旁路开关       |
+| `MID`      | 中开关(3/2接线) |
+| `SIDE`     | 边开关(3/2接线) |
+
+#### LoadType
+
+负荷类型
+
+| 一级枚举    | 备注   |
+|---------|------|
+| `NORM`  | 普通负荷 |
+| `GTRAN` | 接地变  |
+| `FTRAN` | 站用变  |
+
+#### AnalogType
+
+模拟量类型
+
+| 一级枚举        | 二级枚举          | 备注             |
+|-------------|---------------|----------------|
+| `PRIMARY`   | `NORM`        | 一次设备/普通遥测      |
+| `PRIMARY`   | `P`           | 一次设备/有功        |
+| `PRIMARY`   | `Q`           | 一次设备/无功        |
+| `PRIMARY`   | `IA`          | 一次设备/A相电流      |
+| `PRIMARY`   | `IB`          | 一次设备/B相电流      |
+| `PRIMARY`   | `IC`          | 一次设备/C相电流      |
+| `PRIMARY`   | `I0`          | 一次设备/零序电流      |
+| `PRIMARY`   | `UA`          | 一次设备/A相电压      |
+| `PRIMARY`   | `UB`          | 一次设备/B相电压      |
+| `PRIMARY`   | `UC`          | 一次设备/C相电压      |
+| `PRIMARY`   | `UAB`         | 一次设备/AB相电压     |
+| `PRIMARY`   | `UBC`         | 一次设备/BC相电压     |
+| `PRIMARY`   | `UCA`         | 一次设备/CA相电压     |
+| `PRIMARY`   | `U0`          | 一次设备/零序电压      |
+| `PRIMARY`   | `ANG`         | 一次设备/电压相角      |
+| `PRIMARY`   | `TAP`         | 一次设备/变压器档位     |
+| `PRIMARY`   | `COS`         | 一次设备/功率因数      |
+| `PRIMARY`   | `F`           | 一次设备/电网频率      |
+| `PRIMARY`   | `TEMP`        | 一次设备/油温        |
+| `SECONDARY` | `NORM`        | 二次设备/普通遥测      |
+| `SECONDARY` | `CPU_LOAD`    | 二次设备/CPU负载率    |
+| `SECONDARY` | `MEM_USAGE`   | 二次设备/内存使用率     |
+| `SECONDARY` | `DISK_USAGE`  | 二次设备/磁盘使用率     |
+| `SECONDARY` | `TEMP`        | 二次设备/装置内部温度    |
+| `SECONDARY` | `LIGHT_POWER` | 二次设备/光功率       |
+| `SECONDARY` | `U`           | 二次设备/工作电压      |
+| `ENV`       | `NORM`        | 辅控动环/普通遥测      |
+| `ENV`       | `SF6`         | 辅控动环/SF6浓度     |
+| `ENV`       | `O2`          | 辅控动环/氧气浓度      |
+| `ENV`       | `H2O`         | 辅控动环/水位        |
+| `ENV`       | `COND_TEMP`   | 辅控动环/空调温度      |
+| `ENV`       | `COND_MODE`   | 辅控动环/空调模式      |
+| `ENV`       | `COND_WD`     | 辅控动环/空调风速      |
+| `ENV`       | `U0`          | 辅控动环/零序电压      |
+| `MONI`      | `NORM`        | 辅控在线监测/普通遥测    |
+| `MONI`      | `C2H2`        | 辅控在线监测/乙炔      |
+| `MONI`      | `C2H4`        | 辅控在线监测/乙烯      |
+| `MONI`      | `C2H6`        | 辅控在线监测/甲烷      |
+| `MONI`      | `CO`          | 辅控在线监测/一氧化碳    |
+| `MONI`      | `H2`          | 辅控在线监测/氢气      |
+| `MONI`      | `N2`          | 辅控在线监测/氮气      |
+| `MONI`      | `O2`          | 辅控在线监测/氧气      |
+| `MONI`      | `H2O`         | 辅控在线监测/水分      |
+| `MONI`      | `HYD`         | 辅控在线监测/总烃      |
+| `MONI`      | `PDMIN`       | 辅控在线监测/局部最小放电量 |
+| `MONI`      | `PDMAX`       | 辅控在线监测/局部最大放电量 |
+| `MONI`      | `PDCOUNT`     | 辅控在线监测/放电次数    |
+| `MONI`      | `LOSS`        | 辅控在线监测/介质损耗因数  |
+| `MONI`      | `CAPA`        | 辅控在线监测/电容量     |
+| `MONI`      | `CORE`        | 辅控在线监测/铁芯接地电流  |
+| `MONI`      | `CLAMP`       | 辅控在线监测/夹件接地电流  |
+| `MONI`      | `PRESSURE`    | 辅控在线监测/压力      |
+| `MONI`      | `TEMP`        | 辅控在线监测/温度      |
+| `SECU`      | `NORM`        | 辅控安防/普通遥测      |
+| `SECU`      | `LOCK`        | 辅控安防/锁控遥测      |
+| `FIRE`      | `NORM`        | 辅控消防/普通遥测      |
+
+#### StatusType
+
+状态量类型
+
+| 一级枚举        | 二级枚举         | 备注          |
+|-------------|--------------|-------------|
+| `PRIMARY`   | `NORM`       | 一次设备/普通遥信   |
+| `PRIMARY`   | `OPEN_CLOSE` | 一次设备/双位置    |
+| `PRIMARY`   | `CLOSE`      | 一次设备/合位     |
+| `PRIMARY`   | `OPEN`       | 一次设备/分位     |
+| `PRIMARY`   | `CLOSE_A`    | 一次设备/A相合位   |
+| `PRIMARY`   | `CLOSE_B`    | 一次设备/B相合位   |
+| `PRIMARY`   | `CLOSE_C`    | 一次设备/C相合位   |
+| `PRIMARY`   | `OPEN_A`     | 一次设备/A相分位   |
+| `PRIMARY`   | `OPEN_B`     | 一次设备/B相分位   |
+| `PRIMARY`   | `OPEN_C`     | 一次设备/C相分位   |
+| `SECONDARY` | `NORM`       | 二次设备/普通遥信   |
+| `SECONDARY` | `COMM`       | 一次设备/通讯状态   |
+| `SECONDARY` | `WARN`       | 一次设备/异常告警   |
+| `SECONDARY` | `CHECK`      | 一次设备/装置自检   |
+| `SECONDARY` | `TS_SIG`     | 一次设备/对时信号状态 |
+| `SECONDARY` | `TS_SVR`     | 一次设备/对时服务状态 |
+| `SECONDARY` | `TS_JUMP`    | 一次设备/时间跳变   |
+| `SECONDARY` | `DUTY`       | 一次设备/主备机状态  |
+| `SECONDARY` | `FAULT_ACT`  | 一次设备/保护动作   |
+| `SECONDARY` | `YB`         | 二次设备/压板     |
+| `AUXI`      | `NORM`       | 辅控/普通遥信     |
+| `AUXI`      | `RUN`        | 辅控/运行状态     |
+| `AUXI`      | `ALARM`      | 辅控/告警状态     |
+| `AUXI`      | `COMM`       | 辅控/通讯状态     |
+| `AUXI`      | `FAULT`      | 辅控/故障状态     |
+| `AUXI`      | `SYNC`       | 辅控/对时状态     |
+| `AUXI`      | `DEFEND`     | 辅控/布防状态     |
+| `AUXI`      | `DOOR`       | 辅控/门状态      |
+| `AUXI`      | `PUMP`       | 辅控/水泵运行工况   |
+| `AUXI`      | `COND_MODE`  | 辅控/空调运行模式   |
+| `AUXI`      | `COND_WD`    | 辅控/空调风速     |
+| `AUXI`      | `FIRE`       | 辅控/火警信号     |
+| `AUXI`      | `INVADE`     | 辅控/入侵信号     |
+| `AUXI`      | `PRESSURE`   | 辅控/压力异常     |
+| `AUXI`      | `LK_DEV`     | 辅控/锁控设备配置更新 |
+| `AUXI`      | `LK_ZONE`    | 辅控/锁控区域配置更新 |
+| `AUXI`      | `LK_MON`     | 辅控/锁控监测信息更新 |
+| `AUXI`      | `LK_ALM`     | 辅控/锁控报警信息更新 |
+| `AUXI`      | `LK_TIP`     | 辅控/锁控提示信息更新 |
+| `AUXI`      | `MONI_FILE`  | 辅控/在线监测文件更新 |
+
+#### RegionType
+
+站内区域类型
+
+| 一级枚举            | 备注    |
+|-----------------|-------|
+| `COMM`          | 普通区域  |
+| `BUILDING`      | 建筑    |
+| `FLOOR`         | 楼层    |
+| `ROOM`          | 房间    |
+| `SWITCH_AREA`   | 开关场所  |
+| `BAY_AREA`      | 间隔场所  |
+| `ROAD`          | 道路    |
+| `DITCH`         | 电缆沟   |
+| `DOOR`          | 门     |
+| `WALL`          | 围墙    |
+| `PRE_CABINET`   | 预制舱   |
+| `CABINET`       | 屏柜    |
+| `ESS_CONTAINER` | 储能集装箱 |

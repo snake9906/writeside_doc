@@ -1,4 +1,4 @@
-# 一次设备模型
+# 一二次设备模型
 
 > 一次模型与电压等级、间隔的关联性最强，所以与间隔建立共生关系；
 > 变压器比较特殊，与间隔建立非共生关系，与厂站建立共生关系；
@@ -253,10 +253,174 @@
 </tab>
 <tab title="索引分区">
 
+|           **属性**           |             **中文名**             |                              **类型**                               |        **说明**         |
+|:--------------------------:|:-------------------------------:|:-----------------------------------------------------------------:|:---------------------:|
+|       `MemberOfBay`        | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |                       |
+| `RefCompositeDisconnector` | 关联的[**Switch**](#disconnector)  |         [**SingleRef**](Base-Attribute-Type.md#singleref)         | 关联的组合刀闸，联动用。例如手车、三态刀闸 |
+
+</tab>
+
+</tabs> 
+
+## Breaker
+
+开关类，继承自[`Switch`](Abstract-Class.md#switch)。
+
+<tabs>
+    <tab title="维护分区">
+
+| **属性** | **中文名** |                   **类型**                    | **说明** |
+|:------:|:-------:|:-------------------------------------------:|:------:|
+| `type` |  开关类型   | [**BreakerType**](Enum-Type.md#breakertype) |        |
+
+</tab>
+<tab title="同步分区">
+无
+
+</tab>
+<tab title="索引分区">
+
 |    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
 |:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
 | `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
 
 </tab>
 
-</tabs> 
+</tabs>
+
+## ShuntCompensator
+
+并联容抗器类，继承自[`PrimaryEquipment`](Abstract-Class.md#primaryequipment)。
+
+
+<tabs>
+    <tab title="维护分区">
+
+|   **属性**    | **中文名** |                 **类型**                  | **说明** |
+|:-----------:|:-------:|:---------------------------------------:|:------:|
+| `isReactor` | 是否为电抗器  |   [Bool](Base-Attribute-Type.md#bool)   | 默认为电容器 |
+|  `ratedU`   |  额定电压   | [Double](Base-Attribute-Type.md#double) |        |
+|  `ratedQ`   |  额定无功   | [Double](Base-Attribute-Type.md#double) |        |
+
+</tab>
+<tab title="同步分区">
+无
+
+</tab>
+<tab title="索引分区">
+
+|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
+|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
+| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+
+</tab>
+
+</tabs>
+
+## SeriesCompensator
+
+串联容抗器类，继承自[`PrimaryEquipment`](Abstract-Class.md#primaryequipment)。
+
+
+<tabs>
+    <tab title="维护分区">
+
+| **属性** | **中文名** |                 **类型**                  | **说明** |
+|:------:|:-------:|:---------------------------------------:|:------:|
+|  `r`   |  正序电阻   | [Double](Base-Attribute-Type.md#double) |        |
+|  `x`   |  正序电抗   | [Double](Base-Attribute-Type.md#double) |        |
+| `xmin` | 电抗可调节下限 | [Double](Base-Attribute-Type.md#double) |        |
+| `xmax` | 电抗可调节上限 | [Double](Base-Attribute-Type.md#double) |        |
+
+</tab>
+<tab title="同步分区">
+无
+
+</tab>
+<tab title="索引分区">
+
+|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
+|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
+| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+
+</tab>
+
+</tabs>
+
+## StaticVarGenerator
+
+SVG类，继承自[`PrimaryEquipment`](Abstract-Class.md#primaryequipment)。
+
+
+<tabs>
+    <tab title="维护分区">
+
+| **属性** | **中文名** | **类型** | **说明** |
+|:------:|:-------:|:------:|:------:|
+
+</tab>
+<tab title="同步分区">
+无
+
+</tab>
+<tab title="索引分区">
+
+|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
+|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
+| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+
+</tab>
+
+</tabs>
+
+## StaticVarCompensator
+
+SVC类，继承自[`PrimaryEquipment`](Abstract-Class.md#primaryequipment)。
+
+
+<tabs>
+    <tab title="维护分区">
+
+| **属性** | **中文名** | **类型** | **说明** |
+|:------:|:-------:|:------:|:------:|
+
+</tab>
+<tab title="同步分区">
+无
+
+</tab>
+<tab title="索引分区">
+
+|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
+|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
+| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+
+</tab>
+
+</tabs>
+
+## EnergyConsumer
+
+负荷类，继承自[`PrimaryEquipment`](Abstract-Class.md#primaryequipment)。
+
+<tabs>
+    <tab title="维护分区">
+
+| **属性** | **中文名** |                **类型**                 | **说明** |
+|:------:|:-------:|:-------------------------------------:|:------:|
+| `type` |  负荷类型   | [**LoadType**](Enum-Type.md#loadtype) |        |
+
+</tab>
+<tab title="同步分区">
+无
+
+</tab>
+<tab title="索引分区">
+
+|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
+|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
+| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+
+</tab>
+
+</tabs>
