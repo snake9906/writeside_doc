@@ -73,25 +73,25 @@
 </tab>
 <tab title="同步分区">
 
-|         **属性**          |  **中文名**  |                         **类型**                          | **说明** |
-|:-----------------------:|:---------:|:-------------------------------------------------------:|:------:|
-|        `feValue`        |   前置采集值   |         [Double](Base-Attribute-Type.md#double)         |        |
-|       `feQuality`       |  前置采集质量码  | [FeMeasQuality](Self-defined-Bit-Type.md#femeasquality) |        |
-|      `feTimeStamp`      |  前置采集时标   |           [Time](Base-Attribute-Type.md#time)           | 精确到毫秒  |
-|         `value`         |  SCADA值   |         [Double](Base-Attribute-Type.md#double)         |        |
-|        `quality`        | SCADA质量位  |   [MeasQuality](Self-defined-Bit-Type.md#measquality)   |        |
-|       `timeStamp`       |  SCADA时标  |           [Time](Base-Attribute-Type.md#time)           | 精确到毫秒  |
-|      `moniStatus`       |   监盘状态    |         [Double](Base-Attribute-Type.md#double)         |        |
-|     `overBeginTime`     | 最近越限开始时间  |           [Time](Base-Attribute-Type.md#time)           |        |
-|     `overDuration`      |  越限持续时间   |          [RTime](Base-Attribute-Type.md#rtime)          |        |
-|     `todayMinValue`     |   本日极小值   |         [Double](Base-Attribute-Type.md#double)         |        |
-|   `todayMinValueTime`   | 本日极小值发生时间 |           [Time](Base-Attribute-Type.md#time)           |        |
-|     `todayMaxValue`     |   本日极大值   |         [Double](Base-Attribute-Type.md#double)         |        |
-|   `todayMaxValueTime`   | 本日极大值发生时间 |           [Time](Base-Attribute-Type.md#time)           |        |
-|   `yesterdayMinValue`   |   昨日极小值   |         [Double](Base-Attribute-Type.md#double)         |        |
-| `yesterdayMinValueTime` | 昨日极小值发生时间 |           [Time](Base-Attribute-Type.md#time)           |        |
-|   `yesterdayMaxValue`   |   昨日极大值   |         [Double](Base-Attribute-Type.md#double)         |        |
-| `yesterdayMaxValueTime` | 昨日极大值发生时间 |           [Time](Base-Attribute-Type.md#time)           |        |
+|         **属性**          |  **中文名**  |                           **类型**                            | **说明** |
+|:-----------------------:|:---------:|:-----------------------------------------------------------:|:------:|
+|        `feValue`        |   前置采集值   |           [Double](Base-Attribute-Type.md#double)           |        |
+|       `feQuality`       |  前置采集质量码  | [**FeMeasQuality**](Self-defined-Bit-Type.md#femeasquality) |        |
+|      `feTimeStamp`      |  前置采集时标   |             [Time](Base-Attribute-Type.md#time)             | 精确到毫秒  |
+|         `value`         |  SCADA值   |           [Double](Base-Attribute-Type.md#double)           |        |
+|        `quality`        | SCADA质量位  |   [**MeasQuality**](Self-defined-Bit-Type.md#measquality)   |        |
+|       `timeStamp`       |  SCADA时标  |             [Time](Base-Attribute-Type.md#time)             | 精确到毫秒  |
+|      `moniStatus`       |   监盘状态    |           [Double](Base-Attribute-Type.md#double)           |        |
+|     `overBeginTime`     | 最近越限开始时间  |             [Time](Base-Attribute-Type.md#time)             |        |
+|     `overDuration`      |  越限持续时间   |            [RTime](Base-Attribute-Type.md#rtime)            |        |
+|     `todayMinValue`     |   本日极小值   |           [Double](Base-Attribute-Type.md#double)           |        |
+|   `todayMinValueTime`   | 本日极小值发生时间 |             [Time](Base-Attribute-Type.md#time)             |        |
+|     `todayMaxValue`     |   本日极大值   |           [Double](Base-Attribute-Type.md#double)           |        |
+|   `todayMaxValueTime`   | 本日极大值发生时间 |             [Time](Base-Attribute-Type.md#time)             |        |
+|   `yesterdayMinValue`   |   昨日极小值   |           [Double](Base-Attribute-Type.md#double)           |        |
+| `yesterdayMinValueTime` | 昨日极小值发生时间 |             [Time](Base-Attribute-Type.md#time)             |        |
+|   `yesterdayMaxValue`   |   昨日极大值   |           [Double](Base-Attribute-Type.md#double)           |        |
+| `yesterdayMaxValueTime` | 昨日极大值发生时间 |             [Time](Base-Attribute-Type.md#time)             |        |
 
 </tab>
 <tab title="索引分区">
@@ -131,15 +131,15 @@
 </tab>
 <tab title="同步分区">
 
-|    **属性**     | **中文名**  |                         **类型**                          | **说明** |
-|:-------------:|:--------:|:-------------------------------------------------------:|:------:|
-|   `feValue`   |  前置采集值   |           [Long](Base-Attribute-Type.md#long)           |        |
-|  `feQuality`  | 前置采集质量码  | [FeMeasQuality](Self-defined-Bit-Type.md#femeasquality) |        |
-| `feTimeStamp` |  前置采集时标  |           [Time](Base-Attribute-Type.md#time)           | 精确到毫秒  |
-|    `value`    |  SCADA值  |           [Long](Base-Attribute-Type.md#long)           |        |
-|   `quality`   | SCADA质量位 |   [MeasQuality](Self-defined-Bit-Type.md#measquality)   |        |
-|  `timeStamp`  | SCADA时标  |           [Time](Base-Attribute-Type.md#time)           | 精确到毫秒  |
-| `moniStatus`  |   监盘状态   |         [Double](Base-Attribute-Type.md#double)         |        |
+|    **属性**     | **中文名**  |                           **类型**                            | **说明** |
+|:-------------:|:--------:|:-----------------------------------------------------------:|:------:|
+|   `feValue`   |  前置采集值   |             [Long](Base-Attribute-Type.md#long)             |        |
+|  `feQuality`  | 前置采集质量码  | [**FeMeasQuality**](Self-defined-Bit-Type.md#femeasquality) |        |
+| `feTimeStamp` |  前置采集时标  |             [Time](Base-Attribute-Type.md#time)             | 精确到毫秒  |
+|    `value`    |  SCADA值  |             [Long](Base-Attribute-Type.md#long)             |        |
+|   `quality`   | SCADA质量位 |   [**MeasQuality**](Self-defined-Bit-Type.md#measquality)   |        |
+|  `timeStamp`  | SCADA时标  |             [Time](Base-Attribute-Type.md#time)             | 精确到毫秒  |
+| `moniStatus`  |   监盘状态   |           [Double](Base-Attribute-Type.md#double)           |        |
 
 </tab>
 <tab title="索引分区">
@@ -174,34 +174,34 @@
 </tab>
 <tab title="同步分区">
 
-|      **属性**       | **中文名**  |                         **类型**                          | **说明** |
-|:-----------------:|:--------:|:-------------------------------------------------------:|:------:|
-|     `feValue`     |  前置采集值   |         [Double](Base-Attribute-Type.md#double)         |        |
-|    `feQuality`    | 前置采集质量码  | [FeMeasQuality](Self-defined-Bit-Type.md#femeasquality) |        |
-|   `feTimeStamp`   |  前置采集时标  |           [Time](Base-Attribute-Type.md#time)           | 精确到毫秒  |
-|      `value`      |  SCADA值  |         [Double](Base-Attribute-Type.md#double)         |        |
-|     `quality`     | SCADA质量位 |   [MeasQuality](Self-defined-Bit-Type.md#measquality)   |        |
-|    `timeStamp`    | SCADA时标  |           [Time](Base-Attribute-Type.md#time)           | 精确到毫秒  |
-|   `moniStatus`    |   监盘状态   |         [Double](Base-Attribute-Type.md#double)         |        |
-| `todayBeginValue` | 本日累计初始值  |         [Double](Base-Attribute-Type.md#double)         |        |
-|   `todayValue`    |  本日累计值   |         [Double](Base-Attribute-Type.md#double)         |        |
-| `monthBeginValue` | 本月累计初始值  |         [Double](Base-Attribute-Type.md#double)         |        |
-|   `monthValue`    |  本月累计值   |         [Double](Base-Attribute-Type.md#double)         |        |
-| `yearBeginValue`  | 本年累计初始值  |         [Double](Base-Attribute-Type.md#double)         |        |
-|    `yearValue`    |  本年累计值   |         [Double](Base-Attribute-Type.md#double)         |        |
+|      **属性**       | **中文名**  |                           **类型**                            | **说明** |
+|:-----------------:|:--------:|:-----------------------------------------------------------:|:------:|
+|     `feValue`     |  前置采集值   |           [Double](Base-Attribute-Type.md#double)           |        |
+|    `feQuality`    | 前置采集质量码  | [**FeMeasQuality**](Self-defined-Bit-Type.md#femeasquality) |        |
+|   `feTimeStamp`   |  前置采集时标  |             [Time](Base-Attribute-Type.md#time)             | 精确到毫秒  |
+|      `value`      |  SCADA值  |           [Double](Base-Attribute-Type.md#double)           |        |
+|     `quality`     | SCADA质量位 |   [**MeasQuality**](Self-defined-Bit-Type.md#measquality)   |        |
+|    `timeStamp`    | SCADA时标  |             [Time](Base-Attribute-Type.md#time)             | 精确到毫秒  |
+|   `moniStatus`    |   监盘状态   |           [Double](Base-Attribute-Type.md#double)           |        |
+| `todayBeginValue` | 本日累计初始值  |           [Double](Base-Attribute-Type.md#double)           |        |
+|   `todayValue`    |  本日累计值   |           [Double](Base-Attribute-Type.md#double)           |        |
+| `monthBeginValue` | 本月累计初始值  |           [Double](Base-Attribute-Type.md#double)           |        |
+|   `monthValue`    |  本月累计值   |           [Double](Base-Attribute-Type.md#double)           |        |
+| `yearBeginValue`  | 本年累计初始值  |           [Double](Base-Attribute-Type.md#double)           |        |
+|    `yearValue`    |  本年累计值   |           [Double](Base-Attribute-Type.md#double)           |        |
 
 </tab>
 <tab title="索引分区">
 
-|       **属性**        |                      **中文名**                      |                               **类型**                                |  **说明**  |
-|:-------------------:|:-------------------------------------------------:|:-------------------------------------------------------------------:|:--------:|
-|    `MemberOfIED`    |          所属的[**IED**](meas-model.md#ied)          |  [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)  |          |
-| `MemberOfEquipment` |                    所属的设备/设备容器                     | [**ASymbSeqDlistSlave**](Base-Attribute-Type.md#asymbseqdlistslave) |          |
-|  `RefFeAccmulator`  |                     关联的前置累计量                      |           [**CrossRef**](Base-Attribute-Type.md#crossref)           |          |
-|      `RefBay`       |          关联的[**Bay**](Core-Model.md#bay)          |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
-|  `RefVoltageLevel`  | 关联的[**VoltageLevel**](Core-Model.md#voltagelevel) |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
-|   `RefSubstation`   |   关联的[**Substation**](Core-Model.md#substation)   |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
-|   `RefAuxSystem`    |                                                   |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+|        **属性**        |                         **中文名**                         |                               **类型**                                |  **说明**  |
+|:--------------------:|:-------------------------------------------------------:|:-------------------------------------------------------------------:|:--------:|
+|    `MemberOfIED`     |             所属的[**IED**](meas-model.md#ied)             |  [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)  |          |
+| `MemberOfEquipment`  |                       所属的设备/设备容器                        | [**ASymbSeqDlistSlave**](Base-Attribute-Type.md#asymbseqdlistslave) |          |
+|  `RefFeAccmulator`   |                        关联的前置累计量                         |           [**CrossRef**](Base-Attribute-Type.md#crossref)           |          |
+|       `RefBay`       |             关联的[**Bay**](Core-Model.md#bay)             |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+|  `RefVoltageLevel`   |    关联的[**VoltageLevel**](Core-Model.md#voltagelevel)    |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+|   `RefSubstation`    |      关联的[**Substation**](Core-Model.md#substation)      |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+| `RefAuxiliarySystem` | 关联的[**AuxiliarySystem**](auxi-model.md#auxiliarysystem) |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 
 </tab>
 

@@ -12,9 +12,9 @@
 <tabs>
     <tab title="维护分区">
 
-| **属性** | **中文名** |                      **类型**                       | **说明** |
-|:------:|:-------:|:-------------------------------------------------:|:------:|
-| `type` | 一次设备类型  | [PriEquipmentType](Enum-Type.md#priequipmenttype) |  设备分类  |
+| **属性** | **中文名** |                        **类型**                         | **说明** |
+|:------:|:-------:|:-----------------------------------------------------:|:------:|
+| `type` | 一次设备类型  | [**PriEquipmentType**](Enum-Type.md#priequipmenttype) |  设备分类  |
 
 </tab>
 <tab title="同步分区">
@@ -51,14 +51,14 @@
 </tab>
 <tab title="索引分区">
 
-|            **属性**             |                     **中文名**                     |                                **类型**                                 | **说明** |
-|:-----------------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
-| `ContainsPowerTransformerEnd` | 包含的[PowerTransformerEnd](#powertransformerend)  |   [ASymbSeqDlistMaster](Base-Attribute-Type.md#asymbseqdlistmaster)   |        |
-|     `MemberOfSubstation`      |    所属的[Substation](Core-Model.md#substation)    |     [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)     |        |
-|         `MemberOfBay`         |           所属的[Bay](Core-Model.md#bay)           |    [ASymbSeqDlistSlave](Base-Attribute-Type.md#asymbseqdlistslave)    |        |
-|       `ContainsAnalog`        |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
-|       `ContainsStatus`        |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
-|     `ContainsAccumulator`     | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
+|            **属性**             |                      **中文名**                       |                                **类型**                                 | **说明** |
+|:-----------------------------:|:--------------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+| `ContainsPowerTransformerEnd` | 包含的[**PowerTransformerEnd**](#powertransformerend) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|     `MemberOfSubstation`      |   所属的[**Substation**](Core-Model.md#substation)    |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |        |
+|         `MemberOfBay`         |          所属的[**Bay**](Core-Model.md#bay)           |  [**ASymbSeqDlistSlave**](Base-Attribute-Type.md#asymbseqdlistslave)  |        |
+|       `ContainsAnalog`        |       包含的[**Analog**](meas-model.md#analog)        | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|       `ContainsStatus`        |       包含的[**Status**](meas-model.md#status)        | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|     `ContainsAccumulator`     |  包含的[**Accumulator**](meas-model.md#accumulator)   | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
@@ -73,9 +73,9 @@
 <tabs>
     <tab title="维护分区">
 
-| **属性** | **中文名** |                             **类型**                              | **说明** |
-|:------:|:-------:|:---------------------------------------------------------------:|:------:|
-| `type` |  绕组类型   | [PowerTransformerEndType](Enum-Type.md#powertransformerendtype) | 高/中/低  |
+| **属性** | **中文名** |                               **类型**                                | **说明** |
+|:------:|:-------:|:-------------------------------------------------------------------:|:------:|
+| `type` |  绕组类型   | [**PowerTransformerEndType**](Enum-Type.md#powertransformerendtype) | 高/中/低  |
 
 </tab>
 <tab title="同步分区">
@@ -85,8 +85,8 @@
 
 |           **属性**           |                     **中文名**                     |                                **类型**                                 | **说明** |
 |:--------------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
-| `MemberOfPowerTransformer` |    所属的[PowerTransformer](#powertransformer)     |    [ASymbSeqDlistSlave](Base-Attribute-Type.md#asymbseqdlistslave)    |        |
-|       `MemberOfBay`        |           所属的[Bay](Core-Model.md#bay)           |     [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)     |        |
+| `MemberOfPowerTransformer` |  所属的[**PowerTransformer**](#powertransformer)   |  [**ASymbSeqDlistSlave**](Base-Attribute-Type.md#asymbseqdlistslave)  |        |
+|       `MemberOfBay`        |         所属的[**Bay**](Core-Model.md#bay)         |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |        |
 |      `ContainsAnalog`      |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
 |      `ContainsStatus`      |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
 |   `ContainsAccumulator`    | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
@@ -108,11 +108,11 @@
 </tab>
 <tab title="同步分区">
 
-|  **属性**   | **中文名** |                   **类型**                   | **说明** |
-|:---------:|:-------:|:------------------------------------------:|:------:|
-| `mpower`  |  首端潮流   | [Power](Self-defined-Struct-Type.md#power) |        |
-| `zmpower` |  末端潮流   | [Power](Self-defined-Struct-Type.md#power) |        |
-| `empower` |  两端潮流差  | [Power](Self-defined-Struct-Type.md#power) |        |
+|  **属性**   | **中文名** |                     **类型**                     | **说明** |
+|:---------:|:-------:|:----------------------------------------------:|:------:|
+| `mpower`  |  首端潮流   | [**Power**](Self-defined-Struct-Type.md#power) |        |
+| `zmpower` |  末端潮流   | [**Power**](Self-defined-Struct-Type.md#power) |        |
+| `empower` |  两端潮流差  | [**Power**](Self-defined-Struct-Type.md#power) |        |
 
 </tab>
 <tab title="索引分区">
@@ -152,10 +152,10 @@
 </tab>
 <tab title="同步分区">
 
-|  **属性**   | **中文名**  |                   **类型**                   | **说明** |
-|:---------:|:--------:|:------------------------------------------:|:------:|
-|  `bool`   | 是否进行潮流分配 |    [Bool](Base-Attribute-Type.md#bool)     |        |
-| `empower` |   潮流差    | [Power](Self-defined-Struct-Type.md#power) |        |
+|  **属性**   | **中文名**  |                     **类型**                     | **说明** |
+|:---------:|:--------:|:----------------------------------------------:|:------:|
+|  `bool`   | 是否进行潮流分配 |      [Bool](Base-Attribute-Type.md#bool)       |        |
+| `empower` |   潮流差    | [**Power**](Self-defined-Struct-Type.md#power) |        |
 
 </tab>
 <tab title="索引分区">
@@ -164,9 +164,9 @@
 >
 {style="note"}
 
-|       **属性**        |            **中文名**             |                              **类型**                               | **说明** |
-|:-------------------:|:------------------------------:|:-----------------------------------------------------------------:|:------:|
-| `ContainsACLineEnd` | 包含的[**ACLineEnd**](#aclineend) | [ASymbSeqDlistMaster](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|       **属性**        |            **中文名**             |                                **类型**                                 | **说明** |
+|:-------------------:|:------------------------------:|:---------------------------------------------------------------------:|:------:|
+| `ContainsACLineEnd` | 包含的[**ACLineEnd**](#aclineend) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
 
 </tab>
 
@@ -480,9 +480,9 @@ SVC类，继承自[`PrimaryEquipment`](Abstract-Class.md#primaryequipment)。
 <tabs>
     <tab title="维护分区">
 
-| **属性** | **中文名** |                            **类型**                             | **说明** |
-|:------:|:-------:|:-------------------------------------------------------------:|:------:|
-| `type` | 二次设备类型  | [SecondaryEquipmentType](Enum-Type.md#secondaryequipmenttype) |  设备分类  |
+| **属性** | **中文名** |                              **类型**                               | **说明** |
+|:------:|:-------:|:-----------------------------------------------------------------:|:------:|
+| `type` | 二次设备类型  | [**SecondaryEquipmentType**](Enum-Type.md#secondaryequipmenttype) |  设备分类  |
 
 </tab>
 <tab title="同步分区">

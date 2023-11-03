@@ -18,13 +18,13 @@
 <tabs>
     <tab title="维护分区">
 
-|  **属性**  | **中文名** |                **类型**                 | **说明** |
-|:--------:|:-------:|:-------------------------------------:|:------:|
-|  `type`  | 一次设备类型  | [RegionType](Enum-Type.md#regiontype) |  区域分类  |
-| `length` |   长度    | [Float](Base-Attribute-Type.md#float) |        |
-| `width`  |   宽度    | [Float](Base-Attribute-Type.md#float) |        |
-| `height` |   高度    | [Float](Base-Attribute-Type.md#float) |        |
-| `isRect` |  是否为矩形  | [Bool](Base-Attribute-Type.md#float)  |        |
+|  **属性**  | **中文名** |                  **类型**                   | **说明** |
+|:--------:|:-------:|:-----------------------------------------:|:------:|
+|  `type`  | 一次设备类型  | [**RegionType**](Enum-Type.md#regiontype) |  区域分类  |
+| `length` |   长度    |   [Float](Base-Attribute-Type.md#float)   |        |
+| `width`  |   宽度    |   [Float](Base-Attribute-Type.md#float)   |        |
+| `height` |   高度    |   [Float](Base-Attribute-Type.md#float)   |        |
+| `isRect` |  是否为矩形  |   [Bool](Base-Attribute-Type.md#float)    |        |
 
 </tab>
 <tab title="同步分区">
@@ -32,14 +32,14 @@
 </tab>
 <tab title="索引分区">
 
-|            **属性**            |                                  **中文名**                                   |                                 **类型**                                  | **说明** |
-|:----------------------------:|:--------------------------------------------------------------------------:|:-----------------------------------------------------------------------:|:------:|
-|       `MemberOfRegion`       |                   所属的[**Region**](auxi-model.md#region)                    |  [ASymbInlineDlistSlave](Base-Attribute-Type.md#asymbinlinedlistslave)  |        |
-|       `ContainsRegion`       |                   包含的[**Region**](auxi-model.md#region)                    | [ASymbInlineDlistMaster](Base-Attribute-Type.md#asymbinlinedlistmaster) |        |
-|  `ContainsRegionCoordinate`  |         包含的[**RegionCoordinate**](auxi-model.md#regioncoordinate)          |   [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster)   |        |
-|  `ContainsPrimaryEquipment`  |                                  包含的一次设备                                   | [ASymbInlineDlistMaster](Base-Attribute-Type.md#asymbinlinedlistmaster) |        |
-| `ContainsSecondaryEquipment` | 包含的[**AuxiliaryEquipment**](primary-equipment-model.md#secondaryequipment) | [ASymbInlineDlistMaster](Base-Attribute-Type.md#asymbinlinedlistmaster) |        |
-| `ContainsAuxiliaryEquipment` |       包含的[**AuxiliaryEquipment**](auxi-model.md#auxiliaryequipment)        | [ASymbInlineDlistMaster](Base-Attribute-Type.md#asymbinlinedlistmaster) |        |
+|            **属性**            |                                  **中文名**                                   |                                   **类型**                                    | **说明** |
+|:----------------------------:|:--------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|:------:|
+|       `MemberOfRegion`       |                   所属的[**Region**](auxi-model.md#region)                    |  [**ASymbInlineDlistSlave**](Base-Attribute-Type.md#asymbinlinedlistslave)  |        |
+|       `ContainsRegion`       |                   包含的[**Region**](auxi-model.md#region)                    | [**ASymbInlineDlistMaster**](Base-Attribute-Type.md#asymbinlinedlistmaster) |        |
+|  `ContainsRegionCoordinate`  |         包含的[**RegionCoordinate**](auxi-model.md#regioncoordinate)          |     [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster)     |        |
+|  `ContainsPrimaryEquipment`  |                                  包含的一次设备                                   |    [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster)    |        |
+| `ContainsSecondaryEquipment` | 包含的[**AuxiliaryEquipment**](primary-equipment-model.md#secondaryequipment) |    [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster)    |        |
+| `ContainsAuxiliaryEquipment` |       包含的[**AuxiliaryEquipment**](auxi-model.md#auxiliaryequipment)        |    [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster)    |        |
 
 </tab>
 
