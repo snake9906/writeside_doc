@@ -75,9 +75,9 @@
 
 |             **属性**              |                               **中文名**                               |                               **类型**                                | **说明** |
 |:-------------------------------:|:-------------------------------------------------------------------:|:-------------------------------------------------------------------:|:------:|
-|       `ContainsDynLimit`        |              包含的[**DynLimit**](meas-model.md#dynlimit)              | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
-| `ContainsDynLimitConditionItem` | 包含的[**DynLimitConditionItem**](meas-model.md#dynlimitconditionitem) | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
-|          `RefDynLimit`          |             当前生效的[**DynLimit**](meas-model.md#dynlimit)             |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |        |
+|       `ContainsDynLimit`        |              包含的[**DynLimit**](moni-model.md#dynlimit)              | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
+| `ContainsDynLimitConditionItem` | 包含的[**DynLimitConditionItem**](moni-model.md#dynlimitconditionitem) | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
+|          `RefDynLimit`          |             当前生效的[**DynLimit**](moni-model.md#dynlimit)             |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |        |
 
 </tab>
 
@@ -113,7 +113,7 @@
 
 |         **属性**          |                       **中文名**                       |                              **类型**                               | **说明** |
 |:-----------------------:|:---------------------------------------------------:|:-----------------------------------------------------------------:|:------:|
-| `MemberOfDynLimitGroup` | 所属的[**DynLimitGroup**](meas-model.md#dynlimitgroup) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+| `MemberOfDynLimitGroup` | 所属的[**DynLimitGroup**](moni-model.md#dynlimitgroup) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
 
 </tab>
 
@@ -145,7 +145,7 @@
 
 |         **属性**          |                       **中文名**                       |                              **类型**                               |                                   **说明**                                   |
 |:-----------------------:|:---------------------------------------------------:|:-----------------------------------------------------------------:|:--------------------------------------------------------------------------:|
-| `MemberOfDynLimitGroup` | 所属的[**DynLimitGroup**](meas-model.md#dynlimitgroup) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |                                                                            |
+| `MemberOfDynLimitGroup` | 所属的[**DynLimitGroup**](moni-model.md#dynlimitgroup) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |                                                                            |
 |        `RefMeas`        |                        关联的测点                        |         [**SingleRef**](Base-Attribute-Type.md#singleref)         | 可以关联至[**Analog**](meas-model.md#analog)或[**Status**](meas-model.md#status) |
 
 </tab>
