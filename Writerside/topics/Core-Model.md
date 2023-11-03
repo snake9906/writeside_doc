@@ -1,6 +1,7 @@
 # 核心模型
 
 ## Overview
+
 核心模型基本参照IEC61970的分类方式。
 
 ## BaseVoltage
@@ -64,17 +65,17 @@
 - 厂站与电压等级、IED、控制对象、二次设备为共生父子关联
 - 厂站与状态量、模拟量、累计量为非共生父子关联
 
-|            **属性**            |                              **中文名**                               |                              **类型**                               | **说明** |
-|:----------------------------:|:------------------------------------------------------------------:|:-----------------------------------------------------------------:|:------:|
-|    `ContainsVoltageLevel`    |                  包含的[VoltageLevel](#voltagelevel)                  |  [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)  |        |
-|  `ContainsPowerTransformer`  | 包含的[PowerTransformer](primary-equipment-model.md#powertransformer) |  [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)  |        |
-|        `ContainsIED`         |                    包含的[IED](meas-model.md#ied)                     |  [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)  |        |
-|       `ContainsStatus`       |                               包含的状态量                               | [ASymbSeqDlistMaster](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
-|       `ContainsAnalog`       |                               包含的模拟量                               | [ASymbSeqDlistMaster](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
-|     `ContainsAccmulator`     |                               包含的累计量                               | [ASymbSeqDlistMaster](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
-|      `ContainsControl`       |                              包含的控制对象                               |  [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)  |        |
-| `ContainsSecondaryEquipment` |                              包含的二次设备                               |  [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)  |        |
-|    `RefCtrlCheckSetting`     |                             关联的控制防误设定                              |           [SingleRef](Base-Attribute-Type.md#singleref)           |        |
+|            **属性**            |                              **中文名**                               |                                **类型**                                 | **说明** |
+|:----------------------------:|:------------------------------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+|    `ContainsVoltageLevel`    |                  包含的[VoltageLevel](#voltagelevel)                  |    [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)    |        |
+|  `ContainsPowerTransformer`  | 包含的[PowerTransformer](primary-equipment-model.md#powertransformer) |    [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)    |        |
+|        `ContainsIED`         |                    包含的[IED](meas-model.md#ied)                     |    [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)    |        |
+|       `ContainsAnalog`       |               包含的[**Analog**](meas-model.md#analog)                | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|       `ContainsStatus`       |               包含的[**Status**](meas-model.md#status)                | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|    `ContainsAccumulator`     |          包含的[**Accumulator**](meas-model.md#accumulator)           | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
+|      `ContainsControl`       |                              包含的控制对象                               |    [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)    |        |
+| `ContainsSecondaryEquipment` |                              包含的二次设备                               |    [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)    |        |
+|    `RefCtrlCheckSetting`     |                             关联的控制防误设定                              |             [SingleRef](Base-Attribute-Type.md#singleref)             |        |
 
 </tab>
 
@@ -134,17 +135,17 @@
 </tab>
 <tab title="索引分区">
 
-|            **属性**            |                              **中文名**                               |                              **类型**                               |    **说明**    |
-|:----------------------------:|:------------------------------------------------------------------:|:-----------------------------------------------------------------:|:------------:|
-|         `RefBreaker`         |                                间隔开关                                |           [SingleRef](Base-Attribute-Type.md#singleref)           | 由验库程序判断并自动关联 |
-|    `RefPrimaryEquipment`     |                             间隔主设备(多表)                              |           [SingleRef](Base-Attribute-Type.md#singleref)           | 由验库程序判断并自动关联 |
-|    `MemberOfVoltageLevel`    |                  从属于[VoltageLevel](#voltagelevel)                  |   [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)   |              |
-|  `ContainsPrimaryEquipment`  |                            包含的一次设备(多表)                             |  [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)  |              |
-|  `ContainsPowerTransformer`  | 包含的[PowerTransformer](primary-equipment-model.md#powertransformer) | [ASymbSeqDlistMaster](Base-Attribute-Type.md#asymbseqdlistmaster) |              |
-| `ContainsSecondaryEquipment` |                              包含的二次设备                               |                                                                   |              |
-|       `ContainsStatus`       |                               包含的状态量                               |                                                                   |              |
-|       `ContainsAnalog`       |                               包含的模拟量                               |                                                                   |              |
-|     `ContainsAccmulator`     |                               包含的累计量                               |                                                                   |              |
+|            **属性**            |                                  **中文名**                                   |                                **类型**                                 |    **说明**    |
+|:----------------------------:|:--------------------------------------------------------------------------:|:---------------------------------------------------------------------:|:------------:|
+|         `RefBreaker`         |                                    间隔开关                                    |             [SingleRef](Base-Attribute-Type.md#singleref)             | 由验库程序判断并自动关联 |
+|    `RefPrimaryEquipment`     |                                 间隔主设备(多表)                                  |             [SingleRef](Base-Attribute-Type.md#singleref)             | 由验库程序判断并自动关联 |
+|    `MemberOfVoltageLevel`    |                      从属于[VoltageLevel](#voltagelevel)                      |     [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)     |              |
+|  `ContainsPrimaryEquipment`  |                                包含的一次设备(多表)                                 |    [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)    |              |
+|  `ContainsPowerTransformer`  |     包含的[PowerTransformer](primary-equipment-model.md#powertransformer)     |   [ASymbSeqDlistMaster](Base-Attribute-Type.md#asymbseqdlistmaster)   |              |
+| `ContainsSecondaryEquipment` | 包含的[**SecondaryEquipment**](primary-equipment-model.md#secondaryequipment) |    [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)    |              |
+|       `ContainsAnalog`       |                   包含的[**Analog**](meas-model.md#analog)                    | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |              |
+|       `ContainsStatus`       |                   包含的[**Status**](meas-model.md#status)                    | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |              |
+|    `ContainsAccumulator`     |              包含的[**Accumulator**](meas-model.md#accumulator)               | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |              |              |
 
 </tab>
 

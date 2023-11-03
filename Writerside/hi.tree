@@ -18,6 +18,8 @@
         <toc-element topic="meas-model.md"/>
         <toc-element topic="primary-equipment-model.md"/>
         <toc-element topic="auxi-model.md"/>
+        <toc-element topic="moni-model.md"/>
+        <toc-element topic="control-model.md"/>
     </toc-element>
     <toc-element topic="empty.md" hidden="true"/>
     <toc-element topic="Overview.md" hidden="true"/>
