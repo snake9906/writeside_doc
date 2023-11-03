@@ -21,10 +21,13 @@
 </tab>
 <tab title="索引分区">
 
-|        **属性**        |                    **中文名**                    |                              **类型**                               | **说明** |
-|:--------------------:|:---------------------------------------------:|:-----------------------------------------------------------------:|:------:|
-| `MemberOfSubstation` | 所属的[**Substation**](Core-Model.md#substation) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
-|      `RefFeIED`      |                   关联的前置IED                    |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |        |
+|        **属性**         |                     **中文名**                     |                               **类型**                                | **说明** |
+|:---------------------:|:-----------------------------------------------:|:-------------------------------------------------------------------:|:------:|
+| `MemberOfSubstation`  |  所属的[**Substation**](Core-Model.md#substation)  |  [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)  |        |
+|      `RefFeIED`       |                    关联的前置IED                     |           [**CrossRef**](Base-Attribute-Type.md#crossref)           |        |
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
 
 </tab>
 
@@ -159,11 +162,11 @@
 <tabs>
     <tab title="维护分区">
 
-|        **属性**        | **中文名** |                **类型**                 | **说明** |
-|:--------------------:|:-------:|:-------------------------------------:|:------:|
-|        `type`        |  累计量类型  |                                       |        |
-|      `reverse`       |  是否取反   |  [Bool](Base-Attribute-Type.md#bool)  |        |
-|        `abs`         | 是否取绝对值  |  [Bool](Base-Attribute-Type.md#bool)  |        |
+|  **属性**   | **中文名** |               **类型**                | **说明** |
+|:---------:|:-------:|:-----------------------------------:|:------:|
+|  `type`   |  累计量类型  |                                     |        |
+| `reverse` |  是否取反   | [Bool](Base-Attribute-Type.md#bool) |        |
+|   `abs`   | 是否取绝对值  | [Bool](Base-Attribute-Type.md#bool) |        |
 
 </tab>
 <tab title="同步分区">

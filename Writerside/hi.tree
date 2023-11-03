@@ -6,8 +6,6 @@
                  name="SCADA帮助文档"
                  start-page="model-mainpage.topic">
 
-    <toc-element topic="Backgroud.md" hidden="true">
-    </toc-element>
     <toc-element topic="model-mainpage.topic">
         <toc-element topic="Attribute-Introduce.md">
             <toc-element topic="Base-Attribute-Type.md"/>

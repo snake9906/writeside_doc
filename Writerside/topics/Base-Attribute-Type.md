@@ -141,13 +141,30 @@
 #### ASymbInlineDlistMaster
 非共生内联链表父端
 
-#### ASymbInlineDistSlave
+用于单表自嵌套关联
+
+#### ASymbInlineDlistSlave
 非共生内联链表子端
 
-#### SymbCycSlave
-共生循环嵌套
+用于单表自嵌套关联
 
-1:1自身引用自身的共生关联
+#### SymbCycMaster
+共生循环子表父端
+
+#### SymbCycSlave
+共生循环子表
+
+用于循环子表
+
+#### M2NMaster
+多对多关联父端
+
+用于描述m:n关联
+
+#### M2NSlave
+多对多关联子端
+
+用于描述m:n关联
 
 ## 支持自定义扩展的字段类型
 

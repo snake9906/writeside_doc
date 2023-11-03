@@ -142,6 +142,41 @@ SCADA定义的枚举类型如下：
 | `GTRAN` | 接地变  |
 | `FTRAN` | 站用变  |
 
+#### SecondaryEquipmentType
+
+二次设备类型
+
+| 一级枚举      | 二级枚举          | 备注            |
+|-----------|---------------|---------------|
+| `PROT`    | `NORM`        | 保护装置/普通保护     |
+| `PROT`    | `LINE`        | 保护装置/线路保护     |
+| `PROT`    | `BUS`         | 保护装置/母线保护     |
+| `PROT`    | `SC`          | 保护装置/高抗保护     |
+| `PROT`    | `TRAN`        | 保护装置/主变保护     |
+| `PROT`    | `BUS_CONN`    | 保护装置/母联保护     |
+| `PROT`    | `LINE_MC`     | 保护装置/线路保测一体   |
+| `PROT`    | `BUS_CONN_MC` | 保护装置/分段保测一体   |
+| `PROT`    | `ZYB`         | 保护装置/站用变保护    |
+| `PROT`    | `CP`          | 保护装置/电容器保护    |
+| `PROT`    | `SP`          | 保护装置/电抗器保护    |
+| `MC`      | `NORM`        | 测控装置/普通测控     |
+| `MC`      | `FUNC`        | 测控装置/多功能测控    |
+| `GATEWAY` | `NORM`        | 网关机/普通网关机     |
+| `GATEWAY` | `REALTIME`    | 网关机/实时网关机     |
+| `GATEWAY` | `SERVICE`     | 网关机/服务网关机     |
+| `MONITOR` | `NORM`        | 监控主机/普通主机     |
+| `MONITOR` | `MONITOR`     | 监控主机/监控主机     |
+| `MONITOR` | `APPLICATON`  | 监控主机/综合应用主机   |
+| `SECU`    | `NORM`        | 安自装置/普通设备     |
+| `SECU`    | `FAULT`       | 安自装置/故障解列装置   |
+| `SECU`    | `DPDY`        | 安自装置/低频低压减载装置 |
+| `OTHER`   | `NORM`        | 其他/普通设备       |
+| `OTHER`   | `ROUTER`      | 其他/路由器        |
+| `OTHER`   | `WAVE`        | 其他/故障录波       |
+| `OTHER`   | `JZJL`        | 其他/集中计量装置     |
+| `OTHER`   | `JSJL`        | 其他/结算记录装置     |
+| `OTHER`   | `ACDC`        | 其他/交直流电压      |
+
 #### AnalogType
 
 模拟量类型
@@ -271,3 +306,51 @@ SCADA定义的枚举类型如下：
 | `PRE_CABINET`   | 预制舱   |
 | `CABINET`       | 屏柜    |
 | `ESS_CONTAINER` | 储能集装箱 |
+
+
+#### AuxiliaryEquipmentType
+
+辅控设备类型
+
+| 一级枚举   | 二级枚举         | 备注                   |
+|--------|--------------|----------------------|
+| `MONI` | `NORM`       | 在线监测/普通设备            |
+| `MONI` | `YSP`        | 在线监测/油中溶解气体在线监测单元    |
+| `MONI` | `JF`         | 在线监测/局放在线监测传感器       |
+| `MONI` | `BYQTG`      | 在线监测/变压器套管在线监测传感器    |
+| `MONI` | `TXJJ`       | 在线监测/铁芯夹件接地电流在线监测传感器 |
+| `MONI` | `BLQ`        | 在线监测/避雷器在线监测传感器      |
+| `MONI` | `RXSB`       | 在线监测/容性设备在线监测传感器     |
+| `MONI` | `BRK_SF6`    | 在线监测/断路器SF6气体监测传感器   |
+| `MONI` | `BRK_JX`     | 在线监测/断路器机械特性监测传感器    |
+| `SECU` | `NORM`       | 安防/普通设备              |
+| `SECU` | `DZWL`       | 安防/电子围栏              |
+| `SECU` | `HWDS`       | 安防/红外对射              |
+| `SECU` | `HWSJ`       | 安防/红外双鉴              |
+| `SECU` | `DZWL_ZD`    | 安防/电子围栏终端            |
+| `SECU` | `SECU_ZD`    | 安防/安防监控终端            |
+| `SECU` | `DOOR_ZD`    | 安防/门禁监控终端            |
+| `SECU` | `ELEC_KEY`   | 安防/电子钥匙              |
+| `SECU` | `LOCK_ZD`    | 安防/锁控监控终端            |
+| `ENV`  | `NORM`       | 动环/普通设备              |
+| `ENV`  | `WEATHER`    | 动环/微气象传感器            |
+| `ENV`  | `TEMP_HUM`   | 动环/温湿度传感器            |
+| `ENV`  | `TEMP`       | 动环/温度传感器             |
+| `ENV`  | `HUM`        | 动环/湿度传感器             |
+| `ENV`  | `O2`         | 动环/氧气传感器             |
+| `ENV`  | `H2O_LEAK`   | 动环/漏水传感器             |
+| `ENV`  | `H2O_LEVEL`  | 动环/水位传感器             |
+| `ENV`  | `SF6`        | 动环/SF6传感器            |
+| `ENV`  | `POSTURE`    | 动环/姿势传感器             |
+| `ENV`  | `PUMP`       | 动环/水泵                |
+| `ENV`  | `WIND`       | 动环/风机                |
+| `ENV`  | `COND`       | 动环/空调                |
+| `ENV`  | `DEHUM`      | 动环/除湿机               |
+| `ENV`  | `LIGHT_CTRL` | 动环/照明控制器             |
+| `ENV`  | `ENV_ZD`     | 动环/动环监测终端            |
+| `FIRE` | `YLF`        | 消防/雨淋阀               |
+| `FIRE` | `PYZD`       | 消防/排油注氮              |
+| `FIRE` | `XSW`        | 消防/细水雾灭火设备           |
+| `FIRE` | `FIRE_ALARM` | 消防/火灾自动报警系统          |
+| `FIRE` | `YG`         | 消防/烟感探测器             |
+| `FIRE` | `WG`         | 消防/温感探测器             |

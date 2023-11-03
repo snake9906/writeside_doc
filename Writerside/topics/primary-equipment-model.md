@@ -21,7 +21,13 @@
 无
 </tab>
 <tab title="索引分区">
-无
+
+|        **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
+
 </tab>
 
 </tabs>
@@ -45,11 +51,14 @@
 </tab>
 <tab title="索引分区">
 
-|            **属性**             |                    **中文名**                     |                              **类型**                               | **说明** |
-|:-----------------------------:|:----------------------------------------------:|:-----------------------------------------------------------------:|:------:|
-| `ContainsPowerTransformerEnd` | 包含的[PowerTransformerEnd](#powertransformerend) | [ASymbSeqDlistMaster](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
-|     `MemberOfSubstation`      |   所属的[Substation](Core-Model.md#substation)    |   [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)   |        |
-|         `MemberOfBay`         |          所属的[Bay](Core-Model.md#bay)           |  [ASymbSeqDlistSlave](Base-Attribute-Type.md#asymbseqdlistslave)  |        |
+|            **属性**             |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:-----------------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+| `ContainsPowerTransformerEnd` | 包含的[PowerTransformerEnd](#powertransformerend)  |   [ASymbSeqDlistMaster](Base-Attribute-Type.md#asymbseqdlistmaster)   |        |
+|     `MemberOfSubstation`      |    所属的[Substation](Core-Model.md#substation)    |     [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)     |        |
+|         `MemberOfBay`         |           所属的[Bay](Core-Model.md#bay)           |    [ASymbSeqDlistSlave](Base-Attribute-Type.md#asymbseqdlistslave)    |        |
+|       `ContainsAnalog`        |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|       `ContainsStatus`        |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|     `ContainsAccumulator`     | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
@@ -74,10 +83,13 @@
 </tab>
 <tab title="索引分区">
 
-|           **属性**           |                 **中文名**                  |                             **类型**                              | **说明** |
-|:--------------------------:|:----------------------------------------:|:---------------------------------------------------------------:|:------:|
-| `MemberOfPowerTransformer` | 所属的[PowerTransformer](#powertransformer) | [ASymbSeqDlistSlave](Base-Attribute-Type.md#asymbseqdlistslave) |        |
-|       `MemberOfBay`        |       所属的[Bay](Core-Model.md#bay)        |  [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)  |        |
+|           **属性**           |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:--------------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+| `MemberOfPowerTransformer` |    所属的[PowerTransformer](#powertransformer)     |    [ASymbSeqDlistSlave](Base-Attribute-Type.md#asymbseqdlistslave)    |        |
+|       `MemberOfBay`        |           所属的[Bay](Core-Model.md#bay)           |     [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)     |        |
+|      `ContainsAnalog`      |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|      `ContainsStatus`      |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|   `ContainsAccumulator`    | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
@@ -187,12 +199,15 @@
 > 当多分支交流线路的关联设置后，其余的关联属性会清空。即一个线路端要么从属于交流线路，要么从属于多分支交流线路，不允许同时关联；
 > {style="warning"}
 
-|         **属性**         |               **中文名**                |                               **类型**                                | **说明** |
-|:----------------------:|:------------------------------------:|:-------------------------------------------------------------------:|:------:|
-|      `RefACLine`       |       关联的[**ACLine**](#acline)       |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |        |
-|     `RefACLineEnd`     |   关联的对端[**ACLineEnd**](#aclineend)   |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |        |
-| `MemberOfMulBchACLine` | 所属的[**MulBchACLine**](#mulbchacline) | [**ASymbSeqDlistSlave**](Base-Attribute-Type.md#asymbseqdlistslave) |        |
-|     `MemberOfBay`      |   所属的[**Bay**](Core-Model.md#bay)    |  [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)  |        |
+|         **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:----------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+|      `RefACLine`       |            关联的[**ACLine**](#acline)             |           [**SingleRef**](Base-Attribute-Type.md#singleref)           |        |
+|     `RefACLineEnd`     |        关联的对端[**ACLineEnd**](#aclineend)         |           [**SingleRef**](Base-Attribute-Type.md#singleref)           |        |
+| `MemberOfMulBchACLine` |      所属的[**MulBchACLine**](#mulbchacline)       |  [**ASymbSeqDlistSlave**](Base-Attribute-Type.md#asymbseqdlistslave)  |        |
+|     `MemberOfBay`      |         所属的[**Bay**](Core-Model.md#bay)         |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |        |
+|    `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|    `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+| `ContainsAccumulator`  | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
@@ -223,9 +238,12 @@
 </tab>
 <tab title="索引分区">
 
-|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
-|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
-| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+|        **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+|     `MemberOfBay`     |         所属的[**Bay**](Core-Model.md#bay)         |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |        |
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
@@ -253,10 +271,13 @@
 </tab>
 <tab title="索引分区">
 
-|           **属性**           |             **中文名**             |                              **类型**                               |        **说明**         |
-|:--------------------------:|:-------------------------------:|:-----------------------------------------------------------------:|:---------------------:|
-|       `MemberOfBay`        | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |                       |
-| `RefCompositeDisconnector` | 关联的[**Switch**](#disconnector)  |         [**SingleRef**](Base-Attribute-Type.md#singleref)         | 关联的组合刀闸，联动用。例如手车、三态刀闸 |
+|           **属性**           |                     **中文名**                     |                                **类型**                                 |        **说明**         |
+|:--------------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:---------------------:|
+|       `MemberOfBay`        |         所属的[**Bay**](Core-Model.md#bay)         |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |                       |
+| `RefCompositeDisconnector` |         关联的[**Switch**](#disconnector)          |           [**SingleRef**](Base-Attribute-Type.md#singleref)           | 关联的组合刀闸，联动用。例如手车、三态刀闸 |
+|      `ContainsAnalog`      |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |                       |
+|      `ContainsStatus`      |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |                       |
+|   `ContainsAccumulator`    | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
@@ -280,9 +301,12 @@
 </tab>
 <tab title="索引分区">
 
-|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
-|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
-| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+|        **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+|     `MemberOfBay`     |         所属的[**Bay**](Core-Model.md#bay)         |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |        |
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
@@ -309,9 +333,15 @@
 </tab>
 <tab title="索引分区">
 
-|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
-|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
-| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+|        **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+|     `MemberOfBay`     |         所属的[**Bay**](Core-Model.md#bay)         |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |        |
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
@@ -339,9 +369,12 @@
 </tab>
 <tab title="索引分区">
 
-|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
-|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
-| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+|        **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+|     `MemberOfBay`     |         所属的[**Bay**](Core-Model.md#bay)         |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |        |
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
@@ -365,9 +398,12 @@ SVG类，继承自[`PrimaryEquipment`](Abstract-Class.md#primaryequipment)。
 </tab>
 <tab title="索引分区">
 
-|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
-|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
-| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+|        **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+|     `MemberOfBay`     |         所属的[**Bay**](Core-Model.md#bay)         |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |        |
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
@@ -391,9 +427,12 @@ SVC类，继承自[`PrimaryEquipment`](Abstract-Class.md#primaryequipment)。
 </tab>
 <tab title="索引分区">
 
-|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
-|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
-| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+|        **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+|     `MemberOfBay`     |         所属的[**Bay**](Core-Model.md#bay)         |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |        |
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
@@ -417,9 +456,41 @@ SVC类，继承自[`PrimaryEquipment`](Abstract-Class.md#primaryequipment)。
 </tab>
 <tab title="索引分区">
 
-|    **属性**     |             **中文名**             |                              **类型**                               | **说明** |
-|:-------------:|:-------------------------------:|:-----------------------------------------------------------------:|:------:|
-| `MemberOfBay` | 所属的[**Bay**](Core-Model.md#bay) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+|        **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+|     `MemberOfBay`     |         所属的[**Bay**](Core-Model.md#bay)         |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |        |
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
+
+</tab>
+
+</tabs>
+
+## SecondaryPriEquipment
+
+二次设备，继承自[`Equipment`](Abstract-Class.md#equipment)。
+
+> 不仅包括保护、测控，也包括监控主机、网关机等在站端会使用到的二次设备。
+
+<tabs>
+    <tab title="维护分区">
+
+| **属性** | **中文名** |                            **类型**                             | **说明** |
+|:------:|:-------:|:-------------------------------------------------------------:|:------:|
+| `type` | 二次设备类型  | [SecondaryEquipmentType](Enum-Type.md#secondaryequipmenttype) |  设备分类  |
+
+</tab>
+<tab title="同步分区">
+无
+</tab>
+<tab title="索引分区">
+
+|        **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
+|:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
 
 </tab>
 
