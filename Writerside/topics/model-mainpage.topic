@@ -13,88 +13,88 @@
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
-            <a href="Core-Model.md" type="data" summary="数据库原理介绍">Database introduce</a>
-            <a href="Core-Model.md" type="tools" summary="常用数据库接口说明">Database API</a>
+            <a href="empty.md" type="data" summary="数据库原理介绍">Database introduce</a>
+            <a href="empty.md" type="tools" summary="常用数据库接口说明">Database API</a>
         </spotlight>
 
         <!--    Add several topics that are most important for this section.    -->
         <primary>
             <title>Get started</title>
-            <a href="Base-Attribute-Type.md" summary="数据库原生支持的字段类型列表及说明">数据库字段类型</a>
-            <a href="Self-defined-Bit-Type.md" summary="SCADA数据库自定义Bit位列表及说明">自定义Bit位</a>
-            <a href="Self-defined-Struct-Type.md" summary="SCADA数据库自定义结构体列表及说明">自定义结构体</a>
-            <a href="Enum-Type.md" summary="SCADA数据库自定义枚举列表及说明">自定义枚举</a>
+            <a href="Base-Attribute-Type.md" type="computer" summary="数据库原生支持的字段类型列表及说明">数据库字段类型</a>
+            <a href="Self-defined-Bit-Type.md" type="experiment" summary="SCADA数据库自定义Bit位列表及说明">自定义Bit位</a>
+            <a href="Self-defined-Struct-Type.md" type="support" summary="SCADA数据库自定义结构体列表及说明">自定义结构体</a>
+            <a href="Enum-Type.md" type="tools" summary="SCADA数据库自定义枚举列表及说明">自定义枚举</a>
         </primary>
 
         <!--    Add several topics that are less important or are relevant only for advanced/experienced users.    -->
         <secondary>
             <title>Explore models</title>
-            <a href="Abstract-Class.md" summary="SCADA数据库使用到的基类模型"/>
-            <a href="Core-Model.md" summary="SCADA数据库核心模型，包括厂站、电压等级、间隔等"/>
-            <a href="primary-equipment-model.md" summary="常规一二次电力设备模型，包括线路、开关、变压器、母线、保护、测控等">一二次设备模型</a>
-            <a href="meas-model.md" summary="测点及采集装置模型">量测模型</a>
+            <a href="Abstract-Class.md" type="world" summary="SCADA数据库使用到的基类模型"/>
+            <a href="Core-Model.md" type="settings" summary="SCADA数据库核心模型，包括厂站、电压等级、间隔等"/>
+            <a href="primary-equipment-model.md" type="idea" summary="常规一二次电力设备模型，包括线路、开关、变压器、母线、保护、测控等">一二次设备模型</a>
+            <a href="meas-model.md" type="development" summary="测点及采集装置模型">量测模型</a>
         </secondary>
 
         <!--    Optionally add additional cards and links to topics that are not in this section but may be relevant.    -->
-        <misc>
-            <cards>
-                <title>Other relevant topics as wide cards</title>
-                <a href=""/>
-                <a href="" summary="With a custom card summary"/>
-                <a href="">Custom card title</a>
-                <a href="" summary="With a custom card summary">Custom card title</a>
-            </cards>
+<!--        <misc>-->
+<!--            <cards>-->
+<!--                <title>Other relevant topics as wide cards</title>-->
+<!--                <a href=""/>-->
+<!--                <a href="" summary="With a custom card summary"/>-->
+<!--                <a href="">Custom card title</a>-->
+<!--                <a href="" summary="With a custom card summary">Custom card title</a>-->
+<!--            </cards>-->
 
-            <cards narrow="true">
-                <title>Other relevant topics as narrow cards</title>
-                <a href=""/>
-                <a href=""/>
-                <a href="" summary="With a custom card summary"/>
-                <a href="">Custom card title</a>
-                <a href="">Custom card title</a>
-                <a href="" summary="With a custom card summary">Custom card title</a>
-            </cards>
+<!--            <cards narrow="true">-->
+<!--                <title>Other relevant topics as narrow cards</title>-->
+<!--                <a href=""/>-->
+<!--                <a href=""/>-->
+<!--                <a href="" summary="With a custom card summary"/>-->
+<!--                <a href="">Custom card title</a>-->
+<!--                <a href="">Custom card title</a>-->
+<!--                <a href="" summary="With a custom card summary">Custom card title</a>-->
+<!--            </cards>-->
 
-            <links>
-                <group>
-                    <title>Other related topics as links</title>
-                    <a href=""/>
-                    <a href="" summary="With a custom card summary"/>
-                    <a href="">Custom card title</a>
-                    <a href="" summary="With a custom card summary">Custom card title</a>
-                </group>
-                <group>
-                    <title>Two in a row</title>
-                    <a href=""/>
-                    <a href="" summary="With a custom card summary"/>
-                    <a href="">Custom card title</a>
-                    <a href="" summary="With a custom card summary">Custom card title</a>
-                </group>
-            </links>
+<!--            <links>-->
+<!--                <group>-->
+<!--                    <title>Other related topics as links</title>-->
+<!--                    <a href=""/>-->
+<!--                    <a href="" summary="With a custom card summary"/>-->
+<!--                    <a href="">Custom card title</a>-->
+<!--                    <a href="" summary="With a custom card summary">Custom card title</a>-->
+<!--                </group>-->
+<!--                <group>-->
+<!--                    <title>Two in a row</title>-->
+<!--                    <a href=""/>-->
+<!--                    <a href="" summary="With a custom card summary"/>-->
+<!--                    <a href="">Custom card title</a>-->
+<!--                    <a href="" summary="With a custom card summary">Custom card title</a>-->
+<!--                </group>-->
+<!--            </links>-->
 
-            <links narrow="true">
-                <group>
-                    <title>More related topics</title>
-                    <a href=""/>
-                    <a href="" summary="With a custom card summary"/>
-                    <a href="">Custom card title</a>
-                    <a href="" summary="With a custom card summary">Custom card title</a>
-                </group>
-                <group>
-                    <title>Three in a row</title>
-                    <a href=""/>
-                    <a href=""/>
-                    <a href="">Custom card title</a>
-                    <a href="">Custom card title</a>
-                </group>
-                <group>
-                    <title>Each group is narrow</title>
-                    <a href=""/>
-                    <a href=""/>
-                    <a href="">Custom card title</a>
-                    <a href="">Custom card title</a>
-                </group>
-            </links>
-        </misc>
+<!--            <links narrow="true">-->
+<!--                <group>-->
+<!--                    <title>More related topics</title>-->
+<!--                    <a href=""/>-->
+<!--                    <a href="" summary="With a custom card summary"/>-->
+<!--                    <a href="">Custom card title</a>-->
+<!--                    <a href="" summary="With a custom card summary">Custom card title</a>-->
+<!--                </group>-->
+<!--                <group>-->
+<!--                    <title>Three in a row</title>-->
+<!--                    <a href=""/>-->
+<!--                    <a href=""/>-->
+<!--                    <a href="">Custom card title</a>-->
+<!--                    <a href="">Custom card title</a>-->
+<!--                </group>-->
+<!--                <group>-->
+<!--                    <title>Each group is narrow</title>-->
+<!--                    <a href=""/>-->
+<!--                    <a href=""/>-->
+<!--                    <a href="">Custom card title</a>-->
+<!--                    <a href="">Custom card title</a>-->
+<!--                </group>-->
+<!--            </links>-->
+<!--        </misc>-->
     </section-starting-page>
 </topic>

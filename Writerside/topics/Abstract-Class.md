@@ -5,9 +5,8 @@
 提供公共的基类模型，基类的划分及其属性设计应符合电力系统特点。
 基类模型不实际建模，仅提供公用属性。
 
-## Class Design
 
-### IdentifiedObject
+## IdentifiedObject
 
 对象类，电力系统监控相关的模型类应从此类继承。
 
@@ -31,7 +30,7 @@
 
 </tabs>
 
-### PowerSystemResource
+## PowerSystemResource
 
 电力系统资源类，继承自[`IdentifiedObject`](#identifiedobject)。需要参与管理、统计的模型类应从此类继承。
 
@@ -53,7 +52,7 @@
 
 </tabs>
 
-### Equipment
+## Equipment
 
 设备类，继承自[`PowerSystemResource`](#powersystemresource)。
 
@@ -81,7 +80,7 @@
 
 </tabs>
 
-### EquipmentContainer
+## EquipmentContainer
 
 设备容器类，继承自[`PowerSystemResource`](#powersystemresource)。
 
@@ -115,7 +114,7 @@
 
 </tabs>
 
-### PrimaryEquipment
+## PrimaryEquipment
 
 一次设备类，继承自[`Equipment`](#equipment)。
 
@@ -146,7 +145,7 @@
 
 </tabs>
 
-### Switch
+## Switch
 
 开合设备类，继承自[`PrimaryEquipment`](#primaryequipment)。
 
