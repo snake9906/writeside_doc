@@ -38,4 +38,16 @@
         <description>Created after removal of "数据库模型" from SCADA帮助文档</description>
         <accepts>Backgroud.html</accepts>
     </rule>
+    <rule id="4850ff0b">
+        <description>Created after removal of "model maintain" from SCADA帮助文档</description>
+        <accepts>model-maintain.html</accepts>
+    </rule>
+    <rule id="29b5d59">
+        <description>Created after removal of "Reference" from SCADA帮助文档</description>
+        <accepts>Reference1.html</accepts>
+    </rule>
+    <rule id="37ca36aa">
+        <description>Created after removal of "Tutorial" from SCADA帮助文档</description>
+        <accepts>Tutorial.html</accepts>
+    </rule>
 </rules>

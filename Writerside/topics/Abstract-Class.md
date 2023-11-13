@@ -62,9 +62,7 @@
 |     **属性**      | **中文名** |                   **类型**                    |  **说明**   |
 |:---------------:|:-------:|:-------------------------------------------:|:---------:|
 |   `aggregate`   | 是否为等值设备 |     [Bool](Base-Attribute-Type.md#bool)     |    备用     |
-| `serviceStatus` |  投运状态   | [**ServiceStatus**](Enum-Type.md#servicestatus) | 记录设备的投运状态 |
-| `inServiceTime` |  投运时间   |    [STime](Base-Attribute-Type.md#stime)    |           |
-|  `retireTime`   |  退役时间   |    [STime](Base-Attribute-Type.md#stime)    |           |
+
 
 </tab>
 <tab title="同步分区">
@@ -72,6 +70,9 @@
 |    **属性**    | **中文名** |                      **类型**                       | **说明** |
 |:------------:|:-------:|:-------------------------------------------------:|:------:|
 | `moniStatus` | 设备监盘状态  | [**MoniStatus**](Self-defined-Bit-Type.md#monistatus) |        |
+| `serviceStatus` |  投运状态   | [**ServiceStatus**](Enum-Type.md#servicestatus) | 记录设备的投运状态 |
+| `inServiceTime` |  投运时间   |    [STime](Base-Attribute-Type.md#stime)    |           |
+|  `retireTime`   |  退役时间   |    [STime](Base-Attribute-Type.md#stime)    |           |
 
 </tab>
 <tab title="索引分区">
@@ -90,9 +91,7 @@
 |     **属性**      |  **中文名**  |                   **类型**                    |   **说明**    |
 |:---------------:|:---------:|:-------------------------------------------:|:-----------:|
 |   `aggregate`   | 是否为等值设备容器 |     [Bool](Base-Attribute-Type.md#bool)     |     备用      |
-| `serviceStatus` |   投运状态    | [**ServiceStatus**](Enum-Type.md#servicestatus) | 记录设备容器的投运状态 |
-| `inServiceTime` |   投运时间    |    [STime](Base-Attribute-Type.md#stime)    |             |
-|  `retireTime`   |   退役时间    |    [STime](Base-Attribute-Type.md#stime)    |             |
+
 
 </tab>
 <tab title="同步分区">
@@ -100,6 +99,9 @@
 |    **属性**    | **中文名** |                      **类型**                       | **说明** |
 |:------------:|:-------:|:-------------------------------------------------:|:------:|
 | `moniStatus` | 设备监盘状态  | [**MoniStatus**](Self-defined-Bit-Type.md#monistatus) |        |
+| `serviceStatus` |   投运状态    | [**ServiceStatus**](Enum-Type.md#servicestatus) | 记录设备容器的投运状态 |
+| `inServiceTime` |   投运时间    |    [STime](Base-Attribute-Type.md#stime)    |             |
+|  `retireTime`   |   退役时间    |    [STime](Base-Attribute-Type.md#stime)    |             |
 |  `genPower`  |   总发电   |    [**Power**](Self-defined-Struct-Type.md#power)     |        |
 | `loadPower`  |   总用电   |    [**Power**](Self-defined-Struct-Type.md#power)     |        |
 |  `tranLoss`  |  变压器损耗  |    [**Power**](Self-defined-Struct-Type.md#power)     |        |

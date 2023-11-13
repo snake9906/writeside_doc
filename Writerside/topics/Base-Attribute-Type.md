@@ -1,6 +1,8 @@
 # 数据库字段类型
 
 
+[//]: # (<format style="subscript" color="Red">Hello, world!</format>)
+
 ## 原生支持的字段类型
 
 > 数据库原生支持的字段类型分为**基本数据类型**、**关联关系类型**。

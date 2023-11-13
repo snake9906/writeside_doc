@@ -7,6 +7,10 @@
                  start-page="model-mainpage.topic">
 
     <toc-element topic="model-mainpage.topic">
+        <toc-element topic="model-maintain.topic">
+            <toc-element topic="ied-model-maintain.topic"/>
+            <toc-element topic="primary-model-maintain.md"/>
+        </toc-element>
         <toc-element topic="Attribute-Introduce.md">
             <toc-element topic="Base-Attribute-Type.md"/>
             <toc-element topic="Self-defined-Bit-Type.md"/>
