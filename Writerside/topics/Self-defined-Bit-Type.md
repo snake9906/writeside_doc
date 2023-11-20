@@ -21,15 +21,17 @@ SCADA扩展的位域如下：
 | TESTING       | 测试中  |
 | DEFECT        | 有缺陷  |
 
-#### PrimaryEquipmentStatus
+#### RunningStatus
 
-一次设备运行状态
+设备运行状态
 
 | 名称          | 别名      |
 |-------------|---------|
 | QUIT        | 停电      |
 | CHARGING    | 充电      |
 | RUN         | 运行      |
+| ABNORMAL    | 异常      |
+| ACCIDENT    | 故障      |
 | HEAVY_LOAD  | 重载      |
 | OVER_LOAD   | 过载      |
 | CONTROLLING | 控制中     |
@@ -100,22 +102,23 @@ SCADA扩展的位域如下：
 
 测点质量位
 
-| 名称         | 别名    | 说明             |
-|------------|-------|----------------|
-| UN_INIT    | 未初始化  | 前置未上送过数据       |
-| ACQ_ERR    | 采集中断  | 前置通讯中断         |
-| SUSPICIOUS | 可疑数据  |                |
-| OLD_DATA   | 数据不刷新 | 在定义的周期内未收到前置数据 |
-| BYPASS     | 旁路代   |                |
-| OPPO       | 对端代   |                |    
-| UNREASON   | 越合理限值 |                |
-| CONSTANT   | 数据不变  |                |
-| OVER_LIMIT | 越监视限值 |                |
-| OVER_L1    | 越下限   |                |
-| OVER_L2    | 越下下限  |                |
-| OVER_L3    | 越下下下限 |                |
-| OVER_H1    | 越上限   |                |
-| OVER_H2    | 越上上限  |                |
-| OVER_H3    | 越上上上限 |                |
+| 名称          | 别名    | 说明             |
+|-------------|-------|----------------|
+| UN_INIT     | 未初始化  | 前置未上送过数据       |
+| ACQ_ERR     | 采集中断  | 前置通讯中断         |
+| SUSPICIOUS  | 可疑数据  |                |
+| OLD_DATA    | 数据不刷新 | 在定义的周期内未收到前置数据 |
+| BYPASS      | 旁路代   |                |
+| OPPO        | 对端代   |                |    
+| CONTROLLING | 控制中   |                |
+| UNREASON    | 越合理限值 |                |
+| CONSTANT    | 数据不变  |                |
+| OVER_LIMIT  | 越监视限值 |                |
+| OVER_L1     | 越下限   |                |
+| OVER_L2     | 越下下限  |                |
+| OVER_L3     | 越下下下限 |                |
+| OVER_H1     | 越上限   |                |
+| OVER_H2     | 越上上限  |                |
+| OVER_H3     | 越上上上限 |                |
 
 

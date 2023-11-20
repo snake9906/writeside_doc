@@ -5,7 +5,6 @@
 提供公共的基类模型，基类的划分及其属性设计应符合电力系统特点。
 基类模型不实际建模，仅提供公用属性。
 
-
 ## IdentifiedObject
 
 对象类，电力系统监控相关的模型类应从此类继承。
@@ -59,20 +58,19 @@
 <tabs>
     <tab title="维护分区">
 
-|     **属性**      | **中文名** |                   **类型**                    |  **说明**   |
-|:---------------:|:-------:|:-------------------------------------------:|:---------:|
-|   `aggregate`   | 是否为等值设备 |     [Bool](Base-Attribute-Type.md#bool)     |    备用     |
-
+|   **属性**    | **中文名** |               **类型**                | **说明** |
+|:-----------:|:-------:|:-----------------------------------:|:------:|
+| `aggregate` | 是否为等值设备 | [Bool](Base-Attribute-Type.md#bool) |   备用   |
 
 </tab>
 <tab title="同步分区">
 
-|    **属性**    | **中文名** |                      **类型**                       | **说明** |
-|:------------:|:-------:|:-------------------------------------------------:|:------:|
-| `moniStatus` | 设备监盘状态  | [**MoniStatus**](Self-defined-Bit-Type.md#monistatus) |        |
-| `serviceStatus` |  投运状态   | [**ServiceStatus**](Enum-Type.md#servicestatus) | 记录设备的投运状态 |
-| `inServiceTime` |  投运时间   |    [STime](Base-Attribute-Type.md#stime)    |           |
-|  `retireTime`   |  退役时间   |    [STime](Base-Attribute-Type.md#stime)    |           |
+|     **属性**      | **中文名** |                        **类型**                         |  **说明**   |
+|:---------------:|:-------:|:-----------------------------------------------------:|:---------:|
+|  `moniStatus`   | 设备监盘状态  | [**MoniStatus**](Self-defined-Bit-Type.md#monistatus) |           |
+| `serviceStatus` |  投运状态   |    [**ServiceStatus**](Enum-Type.md#servicestatus)    | 记录设备的投运状态 |
+| `inServiceTime` |  投运时间   |         [STime](Base-Attribute-Type.md#stime)         |           |
+|  `retireTime`   |  退役时间   |         [STime](Base-Attribute-Type.md#stime)         |           |
 
 </tab>
 <tab title="索引分区">
@@ -88,26 +86,26 @@
 <tabs>
     <tab title="维护分区">
 
-|     **属性**      |  **中文名**  |                   **类型**                    |   **说明**    |
-|:---------------:|:---------:|:-------------------------------------------:|:-----------:|
-|   `aggregate`   | 是否为等值设备容器 |     [Bool](Base-Attribute-Type.md#bool)     |     备用      |
-
+|   **属性**    |  **中文名**  |               **类型**                | **说明** |
+|:-----------:|:---------:|:-----------------------------------:|:------:|
+| `aggregate` | 是否为等值设备容器 | [Bool](Base-Attribute-Type.md#bool) |   备用   |
 
 </tab>
 <tab title="同步分区">
 
-|    **属性**    | **中文名** |                      **类型**                       | **说明** |
-|:------------:|:-------:|:-------------------------------------------------:|:------:|
-| `moniStatus` | 设备监盘状态  | [**MoniStatus**](Self-defined-Bit-Type.md#monistatus) |        |
-| `serviceStatus` |   投运状态    | [**ServiceStatus**](Enum-Type.md#servicestatus) | 记录设备容器的投运状态 |
-| `inServiceTime` |   投运时间    |    [STime](Base-Attribute-Type.md#stime)    |             |
-|  `retireTime`   |   退役时间    |    [STime](Base-Attribute-Type.md#stime)    |             |
-|  `genPower`  |   总发电   |    [**Power**](Self-defined-Struct-Type.md#power)     |        |
-| `loadPower`  |   总用电   |    [**Power**](Self-defined-Struct-Type.md#power)     |        |
-|  `tranLoss`  |  变压器损耗  |    [**Power**](Self-defined-Struct-Type.md#power)     |        |
-|  `lineLoss`  |  线路损耗   |    [**Power**](Self-defined-Struct-Type.md#power)     |        |
-|  `facLoss`   |   厂用电   |    [**Power**](Self-defined-Struct-Type.md#power)     |        |
-|    `loss`    |   总损耗   |    [**Power**](Self-defined-Struct-Type.md#power)     |        |
+|     **属性**      | **中文名** |                           **类型**                            |   **说明**    |
+|:---------------:|:-------:|:-----------------------------------------------------------:|:-----------:|
+|  `moniStatus`   | 设备监盘状态  |    [**MoniStatus**](Self-defined-Bit-Type.md#monistatus)    |             |
+| `serviceStatus` |  投运状态   |       [**ServiceStatus**](Enum-Type.md#servicestatus)       | 记录设备容器的投运状态 |
+| `runningStatus` |  运行状态   | [**RunningStatus**](Self-defined-Bit-Type.md#runningstatus) |             |
+| `inServiceTime` |  投运时间   |            [STime](Base-Attribute-Type.md#stime)            |             |
+|  `retireTime`   |  退役时间   |            [STime](Base-Attribute-Type.md#stime)            |             |
+|   `genPower`    |   总发电   |       [**Power**](Self-defined-Struct-Type.md#power)        |             |
+|   `loadPower`   |   总用电   |       [**Power**](Self-defined-Struct-Type.md#power)        |             |
+|   `tranLoss`    |  变压器损耗  |       [**Power**](Self-defined-Struct-Type.md#power)        |             |
+|   `lineLoss`    |  线路损耗   |       [**Power**](Self-defined-Struct-Type.md#power)        |             |
+|    `facLoss`    |   厂用电   |       [**Power**](Self-defined-Struct-Type.md#power)        |             |
+|     `loss`      |   总损耗   |       [**Power**](Self-defined-Struct-Type.md#power)        |             |
 
 </tab>
 <tab title="索引分区">
@@ -130,15 +128,15 @@
 </tab>
 <tab title="同步分区">
 
-|       **属性**       | **中文名**  |                                  **类型**                                   |       **说明**       |
-|:------------------:|:--------:|:-------------------------------------------------------------------------:|:------------------:|
-|      `status`      |  设备运行状态  | [**PrimaryEquipmentStatus**](Self-defined-Bit-Type.md#primaryequipmentstatus) |                    |
-|    `lastStatus`    | 设备上次运行状态 | [**PrimaryEquipmentStatus**](Self-defined-Bit-Type.md#primaryequipmentstatus) | 用于与当前运行状态比较，判断状态变化 |
-| `statusUpdateTime` | 运行状态刷新时间 |                    [Time](Base-Attribute-Type.md#time)                    |                    |
-|     `topColor`     | 设备首端拓扑状态 |               [**TopColor**](Self-defined-Bit-Type.md#topcolor)               |                    |
-|    `ztopColor`     | 设备末端拓扑状态 |               [**TopColor**](Self-defined-Bit-Type.md#topcolor)               |                    |
-|      `itnode`      | 设备首端拓扑点号 |                    [Long](Base-Attribute-Type.md#long)                    |                    |
-|      `ztnode`      | 设备末端拓扑点号 |                    [Long](Base-Attribute-Type.md#long)                    |                    |
+|       **属性**       | **中文名**  |                           **类型**                            |       **说明**       |
+|:------------------:|:--------:|:-----------------------------------------------------------:|:------------------:|
+|      `status`      |  设备运行状态  | [**RunningStatus**](Self-defined-Bit-Type.md#runningstatus) |                    |
+|    `lastStatus`    | 设备上次运行状态 | [**RunningStatus**](Self-defined-Bit-Type.md#runningstatus) | 用于与当前运行状态比较，判断状态变化 |
+| `statusUpdateTime` | 运行状态刷新时间 |             [Time](Base-Attribute-Type.md#time)             |                    |
+|     `topColor`     | 设备首端拓扑状态 |      [**TopColor**](Self-defined-Bit-Type.md#topcolor)      |                    |
+|    `ztopColor`     | 设备末端拓扑状态 |      [**TopColor**](Self-defined-Bit-Type.md#topcolor)      |                    |
+|      `itnode`      | 设备首端拓扑点号 |             [Long](Base-Attribute-Type.md#long)             |                    |
+|      `ztnode`      | 设备末端拓扑点号 |             [Long](Base-Attribute-Type.md#long)             |                    |
 
 </tab>
 <tab title="索引分区">

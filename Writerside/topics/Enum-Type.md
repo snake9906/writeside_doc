@@ -307,7 +307,6 @@ SCADA定义的枚举类型如下：
 | `CABINET`       | 屏柜    |
 | `ESS_CONTAINER` | 储能集装箱 |
 
-
 #### AuxiliaryEquipmentType
 
 辅控设备类型
@@ -354,3 +353,66 @@ SCADA定义的枚举类型如下：
 | `FIRE` | `FIRE_ALARM` | 消防/火灾自动报警系统          |
 | `FIRE` | `YG`         | 消防/烟感探测器             |
 | `FIRE` | `WG`         | 消防/温感探测器             |
+
+#### CtrlType
+
+控制类型
+
+| 一级枚举  | 备注   |
+|-------|------|
+| `YK`  | 遥控   |
+| `YT`  | 遥调   |
+| `SJ`  | 档位升降 |
+| `JT`  | 档位急停 |
+| `XYK` | 虚遥控  |
+| `FG`  | 复归   |
+
+#### GuardMode
+
+控制监护模式
+
+| 一级枚举           | 备注   |
+|----------------|------|
+| `NO_GUARD`     | 无监护  |
+| `LOCAL_GUARD`  | 本机监护 |
+| `REMOTE_GUARD` | 异机监护 |
+
+#### CtrlStage
+
+控制执行阶段
+
+| 一级枚举               | 备注     |
+|--------------------|--------|
+| `NO_CTRL`          | 非控制状态  |
+| `INIT`             | 初始化    |
+| `MDL_CHECK`        | 模型校验中  |
+| `MDL_CHECK_RETURN` | 模型校验返回 |
+| `FW_CHECK`         | 防误校验中  |
+| `FW_CHECK_RETURN`  | 防误校验返回 |
+| `SELECT`           | 选择中    |
+| `SELECT_RETURN`    | 选择返回   |
+| `EXECUTE`          | 执行中    |
+| `EXECUTE_RETURN`   | 执行返回   |
+| `EXECUTE_SUCC`     | 执行成功   |
+| `EXECUTE_FAILED`   | 执行失败   |
+
+#### MultiSrcType
+
+多源类型
+
+| 一级枚举 | 备注 |
+|------|----|
+| `YX` | 遥信 |
+| `YC` | 遥测 |
+| `YM` | 遥脉 |
+| `YK` | 遥控 |
+| `YT` | 遥调 |
+
+#### SrcSelectMode
+
+多源选择模式
+
+| 一级枚举     | 备注   |
+|----------|------|
+| `AUTO`   | 自动选择 |
+| `MANUAL` | 人工选择 |
