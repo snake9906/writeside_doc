@@ -4,28 +4,34 @@
 
 <instance-profile id="hi"
                  name="SCADA帮助文档"
-                 start-page="model-mainpage.topic">
+                 start-page="SCADA-Helper.topic">
 
-    <toc-element topic="model-mainpage.topic">
-        <toc-element topic="model-maintain.topic">
-            <toc-element topic="ied-model-maintain.topic"/>
-            <toc-element topic="primary-model-maintain.md"/>
+    <toc-element topic="SCADA-Helper.topic">
+        <toc-element topic="model-mainpage.topic">
+            <toc-element topic="model-maintain.topic">
+                <toc-element topic="ied-model-maintain.topic"/>
+                <toc-element topic="primary-model-maintain.md"/>
+            </toc-element>
+            <toc-element topic="Attribute-Introduce.md">
+                <toc-element topic="Base-Attribute-Type.md"/>
+                <toc-element topic="Self-defined-Bit-Type.md"/>
+                <toc-element topic="Self-defined-Struct-Type.md"/>
+                <toc-element topic="Enum-Type.md"/>
+            </toc-element>
+            <toc-element topic="Abstract-Class.md"/>
+            <toc-element topic="Core-Model.md"/>
+            <toc-element topic="meas-model.md"/>
+            <toc-element topic="primary-equipment-model.md"/>
+            <toc-element topic="auxi-model.md"/>
+            <toc-element topic="moni-model.md"/>
+            <toc-element topic="control-model.md"/>
         </toc-element>
-        <toc-element topic="Attribute-Introduce.md">
-            <toc-element topic="Base-Attribute-Type.md"/>
-            <toc-element topic="Self-defined-Bit-Type.md"/>
-            <toc-element topic="Self-defined-Struct-Type.md"/>
-            <toc-element topic="Enum-Type.md"/>
+        <toc-element topic="SCADA-server.md">
+            <toc-element topic="acq-server.md"/>
         </toc-element>
-        <toc-element topic="Abstract-Class.md"/>
-        <toc-element topic="Core-Model.md"/>
-        <toc-element topic="meas-model.md"/>
-        <toc-element topic="primary-equipment-model.md"/>
-        <toc-element topic="auxi-model.md"/>
-        <toc-element topic="moni-model.md"/>
-        <toc-element topic="control-model.md"/>
     </toc-element>
-    <toc-element topic="empty.md" hidden="true"/>
+    <toc-element topic="empty.md" hidden="true">
+    </toc-element>
     <toc-element topic="Overview.md" hidden="true"/>
     <toc-element topic="Reference.md" hidden="true"/>
     <toc-element topic="Database-Model-Starting-Page.topic" hidden="true"/>

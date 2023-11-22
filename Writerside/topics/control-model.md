@@ -32,18 +32,18 @@
 </tab>
 <tab title="索引分区">
 
-|            **属性**            |                    **中文名**                    |                              **类型**                               |   **说明**   |
-|:----------------------------:|:---------------------------------------------:|:-----------------------------------------------------------------:|:----------:|
-|     `MemberOfSubstation`     | 所属的[**Substation**](Core-Model.md#substation) | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |            |
-|          `RefMeas`           |                     关联的测点                     |         [**SingleRef**](Base-Attribute-Type.md#singleref)         | 可关联状态量、模拟量 |
-|        `RefFeYKClose`        |                  关联的前置遥控点(合)                  |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |            |
-|        `RefFeYKOpen`         |                  关联的前置遥控点(分)                  |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |            |
-|          `RefFeYT`           |                   关联的前置遥调点                    |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |            |
-|         `RefFeYKTQ`          |                 关联的前置遥控点(检同期)                 |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |            |
-|         `RefFeYKWY`          |                 关联的前置遥控点(检无压)                 |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |            |
-| `RefYKCloseMultiSrcSelector` |               关联的前置遥控点(合)多源选择器                |         [**SingleRef**](Base-Attribute-Type.md#singleref)         |            |
-| `RefYKOpenMultiSrcSelector`  |               关联的前置遥控点(分)多源选择器                |         [**SingleRef**](Base-Attribute-Type.md#singleref)         |            |
-|   `RefYTMultiSrcSelector`    |                 关联的前置遥调多源选择器                  |         [**SingleRef**](Base-Attribute-Type.md#singleref)         |            |
+|            **属性**            |                                 **中文名**                                  |                              **类型**                               |   **说明**   |
+|:----------------------------:|:------------------------------------------------------------------------:|:-----------------------------------------------------------------:|:----------:|
+|     `MemberOfSubstation`     |              所属的[**Substation**](Core-Model.md#substation)               | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |            |
+|          `RefMeas`           |                                  关联的测点                                   |         [**SingleRef**](Base-Attribute-Type.md#singleref)         | 可关联状态量、模拟量 |
+|        `RefFeYKClose`        |                               关联的前置遥控点(合)                                |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |            |
+|        `RefFeYKOpen`         |                               关联的前置遥控点(分)                                |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |            |
+|          `RefFeYT`           |                                 关联的前置遥调点                                 |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |            |
+|         `RefFeYKTQ`          |                              关联的前置遥控点(检同期)                               |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |            |
+|         `RefFeYKWY`          |                              关联的前置遥控点(检无压)                               |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |            |
+| `RefYKCloseMultiSrcSelector` | 关联的前置遥控点(合)对应的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |         [**SingleRef**](Base-Attribute-Type.md#singleref)         |            |
+| `RefYKOpenMultiSrcSelector`  | 关联的前置遥控点(分)对应的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |         [**SingleRef**](Base-Attribute-Type.md#singleref)         |            |
+|   `RefYTMultiSrcSelector`    |                               关联的前置遥调多源选择器                               |         [**SingleRef**](Base-Attribute-Type.md#singleref)         |            |
 
 </tab>
 
