@@ -18,41 +18,41 @@
 autonumber
 
 
-actor "用户" as User
+actor "User" as User
 
-participant "图形界面" as Browser
+participant "Browser" as Browser
 
-participant "监视服务" as Server #orange
+participant "Moni Server" as Server #orange
 
 
 activate User
 
 
-User -> Browser: 进行监视操作
+User -> Browser: operate
 
 activate Browser
 
 
-Browser -> Server: 发送服务请求
+Browser -> Server: send request
 
 activate Server
 
 
-Server -> Server: 解析服务请求
+Server -> Server: parse request
 
 
-Server -> Server: 调用相应功能
+Server -> Server: do function
 
 
-note right of Server: 按需返回执行结果
+note right of Server: return result
 
 
-Server --> Browser: 返回执行结果
+Server --> Browser: return result
 
 deactivate Server
 
 
-Browser --> User: 提示执行结果
+Browser --> User: show result
 
 
 @enduml

@@ -9,4 +9,8 @@
         </variables>
     </build-profile>
 
+    <footer>
+        <copyright>(c) 2007-2023 Sieyuan Hongrui Automation Co., Ltd. All rights reserved.</copyright>
+    </footer>
+
 </buildprofiles>
