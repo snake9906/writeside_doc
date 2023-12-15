@@ -8,38 +8,58 @@
 
 `MoniServer`响应界面操作的时序图如下所示：
 
-```plantuml
-@startuml
+![](moni_server_seq.png)
 
-autonumber
+[//]: # (```plantuml)
 
-actor "用户" as User
-participant "图形界面" as Browser
-participant "监视服务" as Server #orange
+[//]: # (@startuml)
 
-activate User
+[//]: # ()
+[//]: # (autonumber)
 
-User -> Browser: 进行监视操作
-activate Browser
+[//]: # ()
+[//]: # (actor "用户" as User)
 
-Browser -> Server: 发送服务请求
-activate Server
+[//]: # (participant "图形界面" as Browser)
 
-Server -> Server: 解析服务请求
+[//]: # (participant "监视服务" as Server #orange)
 
-Server -> Server: 调用相应功能
+[//]: # ()
+[//]: # (activate User)
 
-note right of Server: 按需返回执行结果
+[//]: # ()
+[//]: # (User -> Browser: 进行监视操作)
 
-Server --> Browser: 返回执行结果
-deactivate Server
+[//]: # (activate Browser)
 
-Browser --> User: 提示执行结果
+[//]: # ()
+[//]: # (Browser -> Server: 发送服务请求)
 
-@enduml
+[//]: # (activate Server)
 
+[//]: # ()
+[//]: # (Server -> Server: 解析服务请求)
 
-```
+[//]: # ()
+[//]: # (Server -> Server: 调用相应功能)
+
+[//]: # ()
+[//]: # (note right of Server: 按需返回执行结果)
+
+[//]: # ()
+[//]: # (Server --> Browser: 返回执行结果)
+
+[//]: # (deactivate Server)
+
+[//]: # ()
+[//]: # (Browser --> User: 提示执行结果)
+
+[//]: # ()
+[//]: # (@enduml)
+
+[//]: # ()
+[//]: # ()
+[//]: # (```)
 
 ## 主备机制
 
