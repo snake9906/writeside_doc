@@ -8,7 +8,7 @@
 
 `MoniServer`响应界面操作的时序图如下所示：
 
-![](moni_server_seq.png)
+[//]: # (![]&#40;moni_server_seq.png&#41;)
 
 ```plantuml
 
