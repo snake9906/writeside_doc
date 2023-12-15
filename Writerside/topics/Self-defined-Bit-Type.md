@@ -92,6 +92,7 @@ SCADA扩展的位域如下：
 | ENERGIZED      | 是否带电   |
 | GROUNDED       | 接地     |
 | TAG_GROUNDED   | 挂牌接地   |
+| IS_DC          | 直流拓扑点  |
 | MAIN_ISLAND    | 主岛     |
 | ISLAND2        | 岛2     |
 | ISLAND3        | 岛3     |

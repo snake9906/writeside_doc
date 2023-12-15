@@ -234,12 +234,10 @@
 <tabs>
     <tab title="维护分区">
 
-|   **属性**    | **中文名** |                   **类型**                   |   **说明**   |
-|:-----------:|:-------:|:------------------------------------------:|:----------:|
-|   `name`    |   名称    | [String64](Base-Attribute-Type.md#string)  |            |
-|   `desc`    |   描述    | [String128](Base-Attribute-Type.md#string) |            |
-| `fieldName` | 置数影响的域名 | [String32](Base-Attribute-Type.md#string)  | 用于指定需要置数的域 |
-| `setValue`  |  置数的值   |    [Bool](Base-Attribute-Type.md#bool)     |   只能置0/1   |
+| **属性** | **中文名** |                   **类型**                   | **说明** |
+|:------:|:-------:|:------------------------------------------:|:------:|
+| `name` |   名称    | [String64](Base-Attribute-Type.md#string)  |        |
+| `desc` |   描述    | [String128](Base-Attribute-Type.md#string) |        |
 
 </tab>
 <tab title="同步分区">

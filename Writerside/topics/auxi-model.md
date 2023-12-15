@@ -20,7 +20,7 @@
 
 |  **属性**  | **中文名** |                  **类型**                   | **说明** |
 |:--------:|:-------:|:-----------------------------------------:|:------:|
-|  `type`  | 一次设备类型  | [**RegionType**](Enum-Type.md#regiontype) |  区域分类  |
+|  `type`  |  区域类型   | [**RegionType**](Enum-Type.md#regiontype) |  区域分类  |
 | `length` |   长度    |   [Float](Base-Attribute-Type.md#float)   |        |
 | `width`  |   宽度    |   [Float](Base-Attribute-Type.md#float)   |        |
 | `height` |   高度    |   [Float](Base-Attribute-Type.md#float)   |        |
@@ -32,14 +32,12 @@
 </tab>
 <tab title="索引分区">
 
-|            **属性**            |                                  **中文名**                                   |                                   **类型**                                    | **说明** |
-|:----------------------------:|:--------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|:------:|
-|       `MemberOfRegion`       |                   所属的[**Region**](auxi-model.md#region)                    |  [**ASymbInlineDlistSlave**](Base-Attribute-Type.md#asymbinlinedlistslave)  |        |
-|       `ContainsRegion`       |                   包含的[**Region**](auxi-model.md#region)                    | [**ASymbInlineDlistMaster**](Base-Attribute-Type.md#asymbinlinedlistmaster) |        |
-|  `ContainsRegionCoordinate`  |         包含的[**RegionCoordinate**](auxi-model.md#regioncoordinate)          |     [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster)     |        |
-|  `ContainsPrimaryEquipment`  |                                  包含的一次设备                                   |    [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster)    |        |
-| `ContainsSecondaryEquipment` | 包含的[**AuxiliaryEquipment**](primary-equipment-model.md#secondaryequipment) |    [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster)    |        |
-| `ContainsAuxiliaryEquipment` |       包含的[**AuxiliaryEquipment**](auxi-model.md#auxiliaryequipment)        |    [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster)    |        |
+|            **属性**            |                            **中文名**                            |                                   **类型**                                    | **说明** |
+|:----------------------------:|:-------------------------------------------------------------:|:---------------------------------------------------------------------------:|:------:|
+|       `MemberOfRegion`       |             所属的[**Region**](auxi-model.md#region)             |  [**ASymbInlineDlistSlave**](Base-Attribute-Type.md#asymbinlinedlistslave)  |        |
+|       `ContainsRegion`       |             包含的[**Region**](auxi-model.md#region)             | [**ASymbInlineDlistMaster**](Base-Attribute-Type.md#asymbinlinedlistmaster) |        |
+|  `ContainsRegionCoordinate`  |   包含的[**RegionCoordinate**](auxi-model.md#regioncoordinate)   |     [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster)     |        |
+| `ContainsAuxiliaryEquipment` | 包含的[**AuxiliaryEquipment**](auxi-model.md#auxiliaryequipment) |    [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster)    |        |
 
 </tab>
 
@@ -64,10 +62,9 @@
 </tab>
 <tab title="索引分区">
 
-|      **属性**      |                **中文名**                |                                 **类型**                                  | **说明** |
-|:----------------:|:-------------------------------------:|:-----------------------------------------------------------------------:|:------:|
-| `MemberOfRegion` | 所属的[**Region**](auxi-model.md#region) |  [ASymbInlineDlistSlave](Base-Attribute-Type.md#asymbinlinedlistslave)  |        |
-| `ContainsRegion` | 包含的[**Region**](auxi-model.md#region) | [ASymbInlineDlistMaster](Base-Attribute-Type.md#asymbinlinedlistmaster) |        |
+|      **属性**      |                **中文名**                |                            **类型**                             | **说明** |
+|:----------------:|:-------------------------------------:|:-------------------------------------------------------------:|:------:|
+| `MemberOfRegion` | 所属的[**Region**](auxi-model.md#region) | [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave) |        |
 
 </tab>
 
@@ -90,11 +87,10 @@
 </tab>
 <tab title="索引分区">
 
-|            **属性**            |                            **中文名**                            |                               **类型**                                | **说明** |
-|:----------------------------:|:-------------------------------------------------------------:|:-------------------------------------------------------------------:|:------:|
-|     `MemberOfSubstation`     |         所属的[**Substation**](Core-Model.md#substation)         |    [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)    |        |
-| `ContainsAuxiliaryEquipment` | 包含的[**AuxiliaryEquipment**](auxi-model.md#auxiliaryequipment) |   [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)   |        |
-|  `ContainsRegionCoordinate`  |   包含的[**RegionCoordinate**](auxi-model.md#regioncoordinate)   | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
+|            **属性**            |                            **中文名**                            |                             **类型**                              | **说明** |
+|:----------------------------:|:-------------------------------------------------------------:|:---------------------------------------------------------------:|:------:|
+|     `MemberOfSubstation`     |         所属的[**Substation**](Core-Model.md#substation)         |  [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)  |        |
+| `ContainsAuxiliaryEquipment` | 包含的[**AuxiliaryEquipment**](auxi-model.md#auxiliaryequipment) | [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster) |        |
 
 </tab>
 
@@ -117,12 +113,14 @@
 </tab>
 <tab title="索引分区">
 
-|            **属性**            |                            **中文名**                            |                               **类型**                                |    **说明**     |
-|:----------------------------:|:-------------------------------------------------------------:|:-------------------------------------------------------------------:|:-------------:|
-|   `MemberOfAuxilarySystem`   |    所属的[**AuxilarySystem**](auxi-model.md#auxiliarysystem)     |    [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)    |               |
-| `ContainsAuxiliaryEquipment` | 包含的[**AuxiliaryEquipment**](auxi-model.md#auxiliaryequipment) |   [SymbSeqArrayMaster](Base-Attribute-Type.md#symbseqarraymaster)   |               |
-|  `ContainsRegionCoordinate`  |   包含的[**RegionCoordinate**](auxi-model.md#regioncoordinate)   | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |               |
-|    `RefPrimaryEquipment`     |                            关联的一次设备                            |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 可关联到所有种类的一次设备 |
+|          **属性**          |                        **中文名**                         |                                **类型**                                 |    **说明**     |
+|:------------------------:|:------------------------------------------------------:|:---------------------------------------------------------------------:|:-------------:|
+| `MemberOfAuxilarySystem` | 所属的[**AuxilarySystem**](auxi-model.md#auxiliarysystem) |     [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)     |               |
+|     `MemberOfRegion`     |         所属的[**Region**](auxi-model.md#region)          |     [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)     |               |
+|  `RefPrimaryEquipment`   |                        关联的一次设备                         |           [**SingleRef**](Base-Attribute-Type.md#singleref)           | 可关联到所有种类的一次设备 |
+|     `ContainsAnalog`     |         包含的[**Analog**](meas-model.md#analog)          | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |               |
+|     `ContainsStatus`     |         包含的[**Status**](meas-model.md#status)          | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |               |
+|  `ContainsAccumulator`   |    包含的[**Accumulator**](meas-model.md#accumulator)     | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
 
 </tab>
 
