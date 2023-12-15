@@ -10,81 +10,91 @@
 
 ![](moni_server_seq.png)
 
-[//]: # (```plantuml)
+```plantuml
 
-[//]: # (@startuml)
+@startuml
 
-[//]: # ()
-[//]: # (autonumber)
 
-[//]: # ()
-[//]: # (actor "用户" as User)
+autonumber
 
-[//]: # (participant "图形界面" as Browser)
 
-[//]: # (participant "监视服务" as Server #orange)
+actor "用户" as User
 
-[//]: # ()
-[//]: # (activate User)
+participant "图形界面" as Browser
 
-[//]: # ()
-[//]: # (User -> Browser: 进行监视操作)
+participant "监视服务" as Server #orange
 
-[//]: # (activate Browser)
 
-[//]: # ()
-[//]: # (Browser -> Server: 发送服务请求)
+activate User
 
-[//]: # (activate Server)
 
-[//]: # ()
-[//]: # (Server -> Server: 解析服务请求)
+User -> Browser: 进行监视操作
 
-[//]: # ()
-[//]: # (Server -> Server: 调用相应功能)
+activate Browser
 
-[//]: # ()
-[//]: # (note right of Server: 按需返回执行结果)
 
-[//]: # ()
-[//]: # (Server --> Browser: 返回执行结果)
+Browser -> Server: 发送服务请求
 
-[//]: # (deactivate Server)
+activate Server
 
-[//]: # ()
-[//]: # (Browser --> User: 提示执行结果)
 
-[//]: # ()
-[//]: # (@enduml)
+Server -> Server: 解析服务请求
 
-[//]: # ()
-[//]: # ()
-[//]: # (```)
+
+Server -> Server: 调用相应功能
+
+
+note right of Server: 按需返回执行结果
+
+
+Server --> Browser: 返回执行结果
+
+deactivate Server
+
+
+Browser --> User: 提示执行结果
+
+
+@enduml
+
+
+
+```
 
 ## 主备机制
 
-`MoniServer`程序的负载并不高，可以由主机执行所有任务，备机处于热备状态，其中涉及主备切换的任务是遥信变位告警：为了保证所有的遥信变位能够确实发送告警，备机需要监视主机对变位的处理情况，保存未发送告警的变位信息，在备机切换为主机时及时将这些变位信息发送告警。
+`MoniServer`
+程序的负载并不高，可以由主机执行所有任务，备机处于热备状态，其中涉及主备切换的任务是遥信变位告警：为了保证所有的遥信变位能够确实发送告警，备机需要监视主机对变位的处理情况，保存未发送告警的变位信息，在备机切换为主机时及时将这些变位信息发送告警。
 当然严格来说还需要保证设备告警、越限告警等等的主备切换，为了不使程序过于复杂，在没有明确需求时暂不处理。
 
 ## 程序缓存
 
 ### 变化数据缓存
-COSDataQueue/SOEDataQueue，与`AcqServer`一样，也使用固定大小的`spsc_queue`(单生产单消费无锁队列)来放置缓存。变化数据缓存由平台网络事件回调线程生产，由`MoniServer`主线程的相关任务进行消费。
+
+COSDataQueue/SOEDataQueue，与`AcqServer`一样，也使用固定大小的`spsc_queue`(单生产单消费无锁队列)
+来放置缓存。变化数据缓存由平台网络事件回调线程生产，由`MoniServer`主线程的相关任务进行消费。
 
 ### 变位告警缓存
+
 COSAlmQueue/SOEAlmQueue，告警信息缓存队列。
+
 - 对于主机来说，由变位处理任务进行生产，
-- 对于备机来说，订阅接收遥信变位告警，用于与变化数据缓存比较，防止在主备切换时丢失告警数据。缓存由平台网络事件回调线程生产，由`MoniServer`主线程的变位处理任务进行消费。
+-
+对于备机来说，订阅接收遥信变位告警，用于与变化数据缓存比较，防止在主备切换时丢失告警数据。缓存由平台网络事件回调线程生产，由`MoniServer`
+主线程的变位处理任务进行消费。
 
 ### 服务请求缓存
+
 RequestQueue，存放外部程序发送的监视服务请求缓存。缓存由平台网络事件回调线程生产，由`MoniServer`主线程的相关任务进行消费。
 
 ### 服务回复缓存
+
 ResponseQueue，存放需要给外部程序发送的服务回复缓存。缓存由`MoniServer`主线程的相关任务进行生产、消费。
 
 ## 事件回调
 
 `MoniServer`需要处理的事件包括：
+
 - 装库事件(scada)；
 - 配置文件变化事件；
 - SCADA变化数据事件；
@@ -103,10 +113,12 @@ ResponseQueue，存放需要给外部程序发送的服务回复缓存。缓存�
 本任务对模拟量的越限情况进行监视。类似的任务还包括数据不变监视任务、数据跳变监视任务。
 
 ### 发送告警任务
+
 本任务负责将告警数据缓存发送至`AlmServer`。
 对于备机来说，本任务负责将超出缓存时间范围的数据进行消费。
 
 ### 服务调用路由任务
+
 本任务负责将外部程序发送来的服务调用请求进行路由处理(分发给相应的子任务)，并将子任务的执行情况返回给外部程序。
 
 ### 拓扑计算任务
