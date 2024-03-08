@@ -35,6 +35,7 @@
             <a href="meas-model.md" type="development" summary="测点及采集装置模型">量测模型</a>
             <a href="moni-model.md" type="community" summary="标识牌、限值等与监视相关的模型"/>
             <a href="control-model.md" type="turn-on" summary="遥控遥调、防误等与控制相关的模型"/>
+            <a href="ess-model.md" type="tools" summary="储能系统相关的模型"/>
         </secondary>
 
         <!--    Optionally add additional cards and links to topics that are not in this section but may be relevant.    -->
