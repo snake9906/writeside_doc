@@ -71,6 +71,7 @@
 | `serviceStatus` |  投运状态   |    [**ServiceStatus**](Enum-Type.md#servicestatus)    | 记录设备的投运状态 |
 | `inServiceTime` |  投运时间   |         [STime](Base-Attribute-Type.md#stime)         |           |
 |  `retireTime`   |  退役时间   |         [STime](Base-Attribute-Type.md#stime)         |           |
+| `isControlling` |   控制中   |          [Bool](Base-Attribute-Type.md#bool)          |           |
 
 </tab>
 <tab title="索引分区">

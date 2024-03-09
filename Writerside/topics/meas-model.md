@@ -245,7 +245,7 @@
 
 |     **属性**      | **中文名** |               **类型**                | **说明** |
 |:---------------:|:-------:|:-----------------------------------:|:------:|
-| `isControlling` |   控制中   | [Long](Base-Attribute-Type.md#long) |        |
+| `isControlling` |   控制中   | [Bool](Base-Attribute-Type.md#bool) |        |
 
 </tab>
 <tab title="索引分区">
@@ -280,7 +280,7 @@
 
 |     **属性**      | **中文名** |               **类型**                | **说明** |
 |:---------------:|:-------:|:-----------------------------------:|:------:|
-| `isControlling` |   控制中   | [Long](Base-Attribute-Type.md#long) |        |
+| `isControlling` |   控制中   | [Bool](Base-Attribute-Type.md#bool) |        |
 
 </tab>
 <tab title="索引分区">
