@@ -2,6 +2,18 @@
 
 SCADA扩展的位域如下：
 
+#### CheckMode
+
+控制校核模式
+
+| 名称           | 别名    |
+|--------------|-------|
+| NO_CHECK     | 不校核   |
+| WF_CHECK     | 五防校核  |
+| SIG_CHECK    | 信号校核  |
+| LOGIC_CHECK  | 逻辑校核  |
+| TOP_CHECK    | 拓扑校核  |
+
 #### MoniStatus
 
 监盘状态

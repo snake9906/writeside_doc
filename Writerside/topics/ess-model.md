@@ -20,6 +20,7 @@
 
 |        **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
 |:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
+| `MemberOfSubstation`  |  所属的[**Substation**](Core-Model.md#substation)  |     [SymbSeqArraySlave](Base-Attribute-Type.md#symbseqarrayslave)     |        |
 |      `RefJKIed`       |      关联的机控IED[**IED**](meas-model.md#ied)       |           [**SingleRef**](Base-Attribute-Type.md#singleref)           |        |
 |   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
 |   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
@@ -28,7 +29,6 @@
 
 </tab>
 </tabs>
-
 
 ## ESPcs
 

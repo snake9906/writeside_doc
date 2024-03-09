@@ -2,8 +2,8 @@
 
 ## Overview
 
-包括采集装置、三遥。
-> SCADA的量测模型与FE的量测模型基本是一一对应的，包括IED、模拟量、状态量、累计量。
+包括采集装置、四遥等。
+> SCADA的量测模型与FE的量测模型基本是一一对应的，包括IED、模拟量、状态量、累计量、遥控、遥调。
 >
 > 量测可以与设备、设备容器进行关联。
 
@@ -16,21 +16,29 @@
 
 |   **属性**    | **中文名**  |               **类型**                |          **说明**          |
 |:-----------:|:--------:|:-----------------------------------:|:------------------------:|
+|   `type`    |  IED类型   | [**IEDType**](Enum-Type.md#iedtype) |          IED分类           |
 | `isVirtual` | 是否为虚拟IED | [Bool](Base-Attribute-Type.md#bool) | 虚拟IED非实采，用来存放SCADA自建的量测点 |
 
 </tab>
 <tab title="同步分区">
-无
+
+|   **属性**    | **中文名**  |               **类型**                | **说明** |
+|:-----------:|:--------:|:-----------------------------------:|:------:|
+| `connected` |   通讯正常   | [Bool](Base-Attribute-Type.md#bool) |        |
+|  `ciTime`   | 上次通讯中断时间 | [Time](Base-Attribute-Type.md#time) |        |
+
 </tab>
 <tab title="索引分区">
 
-|        **属性**         |                     **中文名**                     |                               **类型**                                | **说明** |
-|:---------------------:|:-----------------------------------------------:|:-------------------------------------------------------------------:|:------:|
-| `MemberOfSubstation`  |  所属的[**Substation**](Core-Model.md#substation)  |  [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)  |        |
-|      `RefFeIED`       |                    关联的前置IED                     |           [**CrossRef**](Base-Attribute-Type.md#crossref)           |        |
-|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
-|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
-| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
+|        **属性**         |                     **中文名**                     |                               **类型**                                |    **说明**     |
+|:---------------------:|:-----------------------------------------------:|:-------------------------------------------------------------------:|:-------------:|
+| `MemberOfSubstation`  |  所属的[**Substation**](Core-Model.md#substation)  |  [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)  |               |
+|      `RefFeIED`       |                    关联的前置IED                     |           [**CrossRef**](Base-Attribute-Type.md#crossref)           |               |
+|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |               |
+|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |               |
+| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |               |
+|    `RefCommStatus`    |                     IED通讯状态                     |           [**CrossRef**](Base-Attribute-Type.md#crossref)           |               |
+| `RefPrimaryEquipment` |                     关联的一次设备                     |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 可关联到所有种类的一次设备 |
 
 </tab>
 
@@ -81,6 +89,7 @@
 |         `value`         |  SCADA值   |           [Double](Base-Attribute-Type.md#double)           |        |
 |        `quality`        | SCADA质量位  |   [**MeasQuality**](Self-defined-Bit-Type.md#measquality)   |        |
 |       `timeStamp`       |  SCADA时标  |             [Time](Base-Attribute-Type.md#time)             | 精确到毫秒  |
+|      `controlling`      |    控制中    |             [Bool](Base-Attribute-Type.md#bool)             |        |
 |      `moniStatus`       |   监盘状态    |           [Double](Base-Attribute-Type.md#double)           |        |
 |     `overBeginTime`     | 最近越限开始时间  |             [Time](Base-Attribute-Type.md#time)             |        |
 |     `overDuration`      |  越限持续时间   |            [RTime](Base-Attribute-Type.md#rtime)            |        |
@@ -96,18 +105,20 @@
 </tab>
 <tab title="索引分区">
 
-|        **属性**         |                            **中文名**                            |                               **类型**                                |  **说明**  |
-|:---------------------:|:-------------------------------------------------------------:|:-------------------------------------------------------------------:|:--------:|
-|     `MemberOfIED`     |                所属的[**IED**](meas-model.md#ied)                |  [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)  |          |
-|  `MemberOfEquipment`  |                          所属的设备/设备容器                           | [**ASymbSeqDlistSlave**](Base-Attribute-Type.md#asymbseqdlistslave) |          |
-|   `RefStaticLimit`    |        关联的[**StaticLimit**](moni-model.md#staticlimit)        |          [**SingleRef**](Base-Attribute-Type.md#crossref)           |          |
-|  `RefDynLimitGroup`   |      关联的[**DynLimitGroup**](moni-model.md#dynlimitgroup)      |          [**SingleRef**](Base-Attribute-Type.md#crossref)           |          |
-|     `RefFeAnalog`     |                           关联的前置模拟量                            |           [**CrossRef**](Base-Attribute-Type.md#crossref)           |          |
-| `RefMultiSrcSelector` | 关联的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |          |
-|       `RefBay`        |                关联的[**Bay**](Core-Model.md#bay)                |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
-|   `RefVoltageLevel`   |       关联的[**VoltageLevel**](Core-Model.md#voltagelevel)       |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
-|    `RefSubstation`    |         关联的[**Substation**](Core-Model.md#substation)         |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
-|    `RefAuxSystem`     |       关联的[**AuxSystem**](auxi-model.md#auxiliarysystem)       |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+|         **属性**          |                            **中文名**                            |                               **类型**                                |  **说明**  |
+|:-----------------------:|:-------------------------------------------------------------:|:-------------------------------------------------------------------:|:--------:|
+|      `MemberOfIED`      |                所属的[**IED**](meas-model.md#ied)                |  [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)  |          |
+|   `MemberOfEquipment`   |                          所属的设备/设备容器                           | [**ASymbSeqDlistSlave**](Base-Attribute-Type.md#asymbseqdlistslave) |          |
+|    `RefStaticLimit`     |        关联的[**StaticLimit**](moni-model.md#staticlimit)        |          [**SingleRef**](Base-Attribute-Type.md#crossref)           |          |
+|   `RefDynLimitGroup`    |      关联的[**DynLimitGroup**](moni-model.md#dynlimitgroup)      |          [**SingleRef**](Base-Attribute-Type.md#crossref)           |          |
+|      `RefFeAnalog`      |                           关联的前置模拟量                            |           [**CrossRef**](Base-Attribute-Type.md#crossref)           |          |
+|  `RefMultiSrcSelector`  | 关联的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |          |
+|     `RefRegulating`     |         关联的[**Regulating**](meas-model.md#regulating)         |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |   关联遥调   |
+| `RefRegulatingSelector` | 关联的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |  关联遥调多源  |
+|        `RefBay`         |                关联的[**Bay**](Core-Model.md#bay)                |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+|    `RefVoltageLevel`    |       关联的[**VoltageLevel**](Core-Model.md#voltagelevel)       |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+|     `RefSubstation`     |         关联的[**Substation**](Core-Model.md#substation)         |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+|     `RefAuxSystem`      |       关联的[**AuxSystem**](auxi-model.md#auxiliarysystem)       |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 
 </tab>
 
@@ -151,10 +162,16 @@
 |  `MemberOfEquipment`  |                          所属的设备/设备容器                           | [**ASymbSeqDlistSlave**](Base-Attribute-Type.md#asymbseqdlistslave) |          |
 |     `RefFeStatus`     |                           关联的前置模拟量                            |           [**CrossRef**](Base-Attribute-Type.md#crossref)           |          |
 | `RefMultiSrcSelector` | 关联的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |          |
+|     `RefControl`      |            关联的[**Control**](meas-model.md#control)            |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |   关联遥控   |
+| `RefControlSelector`  | 关联的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |  关联遥控多源  |
+|   `RefControlOpen`    |            关联的[**Control**](meas-model.md#control)            |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |  关联遥控分   |
+|   `RefControlClose`   |            关联的[**Control**](meas-model.md#control)            |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |  关联遥控合   |
+|    `RefControlJTQ`    |            关联的[**Control**](meas-model.md#control)            |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 关联遥控检同期  |
+|    `RefControlJWY`    |            关联的[**Control**](meas-model.md#control)            |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 关联遥控检无压  |
 |       `RefBay`        |                关联的[**Bay**](Core-Model.md#bay)                |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 |   `RefVoltageLevel`   |       关联的[**VoltageLevel**](Core-Model.md#voltagelevel)       |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 |    `RefSubstation`    |         关联的[**Substation**](Core-Model.md#substation)         |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
-|    `RefAuxSystem`     |                                                               |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+|    `RefAuxSystem`     |       关联的[**AuxSystem**](auxi-model.md#auxiliarysystem)       |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 
 </tab>
 
@@ -204,6 +221,75 @@
 |  `RefVoltageLevel`   |    关联的[**VoltageLevel**](Core-Model.md#voltagelevel)    |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 |   `RefSubstation`    |      关联的[**Substation**](Core-Model.md#substation)      |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 | `RefAuxiliarySystem` | 关联的[**AuxiliarySystem**](auxi-model.md#auxiliarysystem) |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+
+</tab>
+
+</tabs>
+
+## Control
+
+遥控，继承自[`PowerSystemResource`](Abstract-Class.md#powersystemresource)。
+
+<tabs>
+    <tab title="维护分区">
+
+|     **属性**     | **中文名**  |                       **类型**                        | **说明** |
+|:--------------:|:--------:|:---------------------------------------------------:|:------:|
+|  `guardMode`   |   监护模式   |       [**GuardMode**](Enum-Type.md#guardmode)       |        |
+|  `checkMode`   |   校验模式   | [**CheckMode**](Self-defined-Bit-Type.md#checkmode) |        |
+| `isDirectCtrl` |   是否直控   |         [Bool](Base-Attribute-Type.md#bool)         |        |
+| `checkResult`  | 是否检查控制结果 |         [Bool](Base-Attribute-Type.md#bool)         |        |
+
+</tab>
+<tab title="同步分区">
+
+|     **属性**      | **中文名** |               **类型**                | **说明** |
+|:---------------:|:-------:|:-----------------------------------:|:------:|
+| `isControlling` |   控制中   | [Long](Base-Attribute-Type.md#long) |        |
+
+</tab>
+<tab title="索引分区">
+
+|        **属性**         |                            **中文名**                            |                              **类型**                               | **说明** |
+|:---------------------:|:-------------------------------------------------------------:|:-----------------------------------------------------------------:|:------:|
+|     `MemberOfIED`     |                所属的[**IED**](meas-model.md#ied)                | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+|       `RefFeYK`       |                            关联的前置遥控                            |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |        |
+| `RefMultiSrcSelector` | 关联的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |         [**SingleRef**](Base-Attribute-Type.md#singleref)         |        |
+
+</tab>
+
+</tabs>
+
+## Regulating
+
+遥调，继承自[`PowerSystemResource`](Abstract-Class.md#powersystemresource)。
+
+<tabs>
+    <tab title="维护分区">
+
+|     **属性**     | **中文名**  |                       **类型**                        | **说明** |
+|:--------------:|:--------:|:---------------------------------------------------:|:------:|
+|  `guardMode`   |   监护模式   |       [**GuardMode**](Enum-Type.md#guardmode)       |        |
+|  `checkMode`   |   校验模式   | [**CheckMode**](Self-defined-Bit-Type.md#checkmode) |        |
+| `isDirectCtrl` |   是否直控   |         [Bool](Base-Attribute-Type.md#bool)         |        |
+|  `checkZone`   | 是否检查控制死区 |         [Bool](Base-Attribute-Type.md#bool)         |        |
+|   `deadZone`   |   控制死区   |       [Double](Base-Attribute-Type.md#double)       |        |
+
+</tab>
+<tab title="同步分区">
+
+|     **属性**      | **中文名** |               **类型**                | **说明** |
+|:---------------:|:-------:|:-----------------------------------:|:------:|
+| `isControlling` |   控制中   | [Long](Base-Attribute-Type.md#long) |        |
+
+</tab>
+<tab title="索引分区">
+
+|        **属性**         |                            **中文名**                            |                              **类型**                               | **说明** |
+|:---------------------:|:-------------------------------------------------------------:|:-----------------------------------------------------------------:|:------:|
+|     `MemberOfIED`     |                所属的[**IED**](meas-model.md#ied)                | [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave) |        |
+|       `RefFeYT`       |                            关联的前置遥调                            |          [**CrossRef**](Base-Attribute-Type.md#crossref)          |        |
+| `RefMultiSrcSelector` | 关联的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |         [**SingleRef**](Base-Attribute-Type.md#singleref)         |        |
 
 </tab>
 

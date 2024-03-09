@@ -142,7 +142,7 @@ SCADA定义的枚举类型如下：
 | `GTRAN` | 接地变  |
 | `FTRAN` | 站用变  |
 
-#### SecondaryEquipmentType
+#### IEDType
 
 二次设备类型
 
@@ -393,47 +393,16 @@ SCADA定义的枚举类型如下：
 | `FIRE` | `YG`         | 消防/烟感探测器             |
 | `FIRE` | `WG`         | 消防/温感探测器             |
 
-#### CtrlType
-
-控制类型
-
-| 一级枚举  | 备注   |
-|-------|------|
-| `YK`  | 遥控   |
-| `YT`  | 遥调   |
-| `SJ`  | 档位升降 |
-| `JT`  | 档位急停 |
-| `XYK` | 虚遥控  |
-| `FG`  | 复归   |
-
 #### GuardMode
 
 控制监护模式
 
 | 一级枚举           | 备注   |
 |----------------|------|
+| `NO_LOGIN`     | 无登录  |
 | `NO_GUARD`     | 无监护  |
 | `LOCAL_GUARD`  | 本机监护 |
 | `REMOTE_GUARD` | 异机监护 |
-
-#### CtrlStage
-
-控制执行阶段
-
-| 一级枚举               | 备注     |
-|--------------------|--------|
-| `NO_CTRL`          | 非控制状态  |
-| `INIT`             | 初始化    |
-| `MDL_CHECK`        | 模型校验中  |
-| `MDL_CHECK_RETURN` | 模型校验返回 |
-| `FW_CHECK`         | 防误校验中  |
-| `FW_CHECK_RETURN`  | 防误校验返回 |
-| `SELECT`           | 选择中    |
-| `SELECT_RETURN`    | 选择返回   |
-| `EXECUTE`          | 执行中    |
-| `EXECUTE_RETURN`   | 执行返回   |
-| `EXECUTE_SUCC`     | 执行成功   |
-| `EXECUTE_FAILED`   | 执行失败   |
 
 #### MultiSrcType
 
@@ -451,10 +420,11 @@ SCADA定义的枚举类型如下：
 
 多源选择模式
 
-| 一级枚举     | 备注   |
-|----------|------|
-| `AUTO`   | 自动选择 |
-| `MANUAL` | 人工选择 |
+| 一级枚举           | 备注   |
+|----------------|------|
+| `ONLINE_FIRST` | 在线优先 |
+| `DUTY_FIRST`   | 值班优先 |
+| `MANUAL`       | 人工选择 |
 
 #### CompositeSwitchType
 

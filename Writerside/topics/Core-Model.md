@@ -73,7 +73,6 @@
 |       `ContainsAnalog`       |                 包含的[**Analog**](meas-model.md#analog)                  | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
 |       `ContainsStatus`       |                 包含的[**Status**](meas-model.md#status)                  | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
 |    `ContainsAccumulator`     |            包含的[**Accumulator**](meas-model.md#accumulator)             | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |
-|      `ContainsControl`       |                                包含的控制对象                                 |  [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster)  |        |
 | `ContainsSecondaryEquipment` |                                包含的二次设备                                 |  [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster)  |        |
 |    `RefCtrlCheckSetting`     |                               关联的控制防误设定                                |           [**SingleRef**](Base-Attribute-Type.md#singleref)           |        |
 
@@ -135,17 +134,16 @@
 </tab>
 <tab title="索引分区">
 
-|            **属性**            |                                  **中文名**                                   |                                **类型**                                 |    **说明**    |
-|:----------------------------:|:--------------------------------------------------------------------------:|:---------------------------------------------------------------------:|:------------:|
-|         `RefBreaker`         |           间隔开关[**Breaker**](primary-equipment-model.md#breaker)            |           [**SingleRef**](Base-Attribute-Type.md#singleref)           | 由验库程序判断并自动关联 |
-|    `RefPrimaryEquipment`     |                                 间隔主设备(多表)                                  |           [**SingleRef**](Base-Attribute-Type.md#singleref)           | 由验库程序判断并自动关联 |
-|    `MemberOfVoltageLevel`    |                    从属于[**VoltageLevel**](#voltagelevel)                    |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |              |
-|  `ContainsPrimaryEquipment`  |                                包含的一次设备(多表)                                 |  [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster)  |              |
-|  `ContainsPowerTransformer`  |   包含的[**PowerTransformer**](primary-equipment-model.md#powertransformer)   | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |              |
-| `ContainsSecondaryEquipment` | 包含的[**SecondaryEquipment**](primary-equipment-model.md#secondaryequipment) |  [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster)  |              |
-|       `ContainsAnalog`       |                   包含的[**Analog**](meas-model.md#analog)                    | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |              |
-|       `ContainsStatus`       |                   包含的[**Status**](meas-model.md#status)                    | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |              |
-|    `ContainsAccumulator`     |              包含的[**Accumulator**](meas-model.md#accumulator)               | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |              |              |
+|           **属性**           |                                **中文名**                                 |                                **类型**                                 |    **说明**    |
+|:--------------------------:|:----------------------------------------------------------------------:|:---------------------------------------------------------------------:|:------------:|
+|        `RefBreaker`        |         间隔开关[**Breaker**](primary-equipment-model.md#breaker)          |           [**SingleRef**](Base-Attribute-Type.md#singleref)           | 由验库程序判断并自动关联 |
+|   `RefPrimaryEquipment`    |                               间隔主设备(多表)                                |           [**SingleRef**](Base-Attribute-Type.md#singleref)           | 由验库程序判断并自动关联 |
+|   `MemberOfVoltageLevel`   |                  从属于[**VoltageLevel**](#voltagelevel)                  |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |              |
+| `ContainsPrimaryEquipment` |                              包含的一次设备(多表)                               |  [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster)  |              |
+| `ContainsPowerTransformer` | 包含的[**PowerTransformer**](primary-equipment-model.md#powertransformer) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |              |
+|      `ContainsAnalog`      |                 包含的[**Analog**](meas-model.md#analog)                  | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |              |
+|      `ContainsStatus`      |                 包含的[**Status**](meas-model.md#status)                  | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |              |
+|   `ContainsAccumulator`    |            包含的[**Accumulator**](meas-model.md#accumulator)             | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |              |              |
 
 </tab>
 
@@ -166,17 +164,17 @@
 </tab>
 <tab title="同步分区">
 
-|   **属性**   |  **中文名**  |                    **类型**                     | **说明** |
-|:----------:|:---------:|:---------------------------------------------:|:------:|
+|   **属性**   |  **中文名**  |                      **类型**                       | **说明** |
+|:----------:|:---------:|:-------------------------------------------------:|:------:|
 | `topColor` |   拓扑状态    | [**TopColor**](Self-defined-Bit-Type.md#topcolor) |        |
-|  `tnode`   |  所属拓扑点下标  |      [Long](Base-Attribute-Type.md#long)      | 为负数时无效 |
-|   `next`   | 下一个连接节点下标 |      [Long](Base-Attribute-Type.md#long)      | 为负数时无效 |
+|  `tnode`   |  所属拓扑点下标  |        [Long](Base-Attribute-Type.md#long)        | 为负数时无效 |
+|   `next`   | 下一个连接节点下标 |        [Long](Base-Attribute-Type.md#long)        | 为负数时无效 |
 
 </tab>
 <tab title="索引分区">
 
-|         **属性**         |             **中文名**              |                              **类型**                               | **说明** |
-|:----------------------:|:--------------------------------:|:-----------------------------------------------------------------:|:------:|
+|         **属性**         |               **中文名**                |                                **类型**                                 | **说明** |
+|:----------------------:|:------------------------------------:|:---------------------------------------------------------------------:|:------:|
 | `MemberOfVoltageLevel` | 从属于[**VoltageLevel**](#voltagelevel) |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |        |
 |   `ContainsTerminal`   |     包含的[**Terminal**](#terminal)     | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
 

@@ -509,38 +509,3 @@ SVC类，继承自[`PrimaryEquipment`](Abstract-Class.md#primaryequipment)。
 </tab>
 
 </tabs>
-
-## SecondaryEquipment
-
-二次设备，继承自[`Equipment`](Abstract-Class.md#equipment)。
-
-> 不仅包括保护、测控，也包括监控主机、网关机等在站端会使用到的二次设备；
->
-> 二次设备放在间隔下，也可与一次设备建立单向关联。
->
-{style="note"}
-
-<tabs>
-    <tab title="维护分区">
-
-| **属性** | **中文名** |                              **类型**                               | **说明** |
-|:------:|:-------:|:-----------------------------------------------------------------:|:------:|
-| `type` | 二次设备类型  | [**SecondaryEquipmentType**](Enum-Type.md#secondaryequipmenttype) |  设备分类  |
-
-</tab>
-<tab title="同步分区">
-无
-</tab>
-<tab title="索引分区">
-
-|        **属性**         |                     **中文名**                     |                                **类型**                                 |    **说明**     |
-|:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:-------------:|
-|     `MemberOfBay`     |         所属的[**Bay**](Core-Model.md#bay)         |   [**SymbSeqArraySlave**](Base-Attribute-Type.md#symbseqarrayslave)   |               |
-| `RefPrimaryEquipment` |                     关联的一次设备                     |           [**SingleRef**](Base-Attribute-Type.md#singleref)           | 可关联到所有种类的一次设备 |
-|   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |               |
-|   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |               |
-| `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |               |
-
-</tab>
-
-</tabs>
