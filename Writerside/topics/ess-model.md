@@ -1,8 +1,8 @@
 # 储能模型
 
-## ESContainer
+## ESUnit
 
-储能集装箱类，继承自[`Equipment`](Abstract-Class.md#equipment)。
+储能机组类，继承自[`Equipment`](Abstract-Class.md#equipment)。
 
 <tabs>
     <tab title="维护分区">
@@ -11,7 +11,7 @@
 |:---------------:|:-------:|:---------------------------------------:|:------:|
 | `ratedCapacity` |  额定容量   | [Double](Base-Attribute-Type.md#double) |        |
 |  `ratedPower`   |  额定功率   | [Double](Base-Attribute-Type.md#double) |        |
-|     `type`      |  集装箱类型  |   [Long](Base-Attribute-Type.md#long)   |   备用   |
+|     `type`      |  机组类型   |   [Long](Base-Attribute-Type.md#long)   |   备用   |
 
 </tab>
 <tab title="同步分区">
@@ -53,7 +53,7 @@
 
 |        **属性**         |                     **中文名**                     |                                **类型**                                 | **说明** |
 |:---------------------:|:-----------------------------------------------:|:---------------------------------------------------------------------:|:------:|
-| `MemberOfESContainer` | 所属的[**ESContainer**](ess-model.md#escontainer)  |  [**ASymbSeqDlistSlave**](Base-Attribute-Type.md#asymbseqdlistslave)  |        |
+|   `MemberOfESUnit`    |      所属的[**ESUnit**](ess-model.md#esunit)       |  [**ASymbSeqDlistSlave**](Base-Attribute-Type.md#asymbseqdlistslave)  |        |
 |   `ContainsAnalog`    |      包含的[**Analog**](meas-model.md#analog)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
 |   `ContainsStatus`    |      包含的[**Status**](meas-model.md#status)      | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |
 | `ContainsAccumulator` | 包含的[**Accumulator**](meas-model.md#accumulator) | [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster) |        |

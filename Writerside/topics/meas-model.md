@@ -22,10 +22,14 @@
 </tab>
 <tab title="同步分区">
 
-|   **属性**    | **中文名**  |               **类型**                | **说明** |
-|:-----------:|:--------:|:-----------------------------------:|:------:|
-| `connected` |   通讯正常   | [Bool](Base-Attribute-Type.md#bool) |        |
-|  `ciTime`   | 上次通讯中断时间 | [Time](Base-Attribute-Type.md#time) |        |
+|        **属性**         |  **中文名**   |               **类型**                | **说明** |
+|:---------------------:|:----------:|:-----------------------------------:|:------:|
+|     `commStatus`      |    通讯状态    | [Bool](Base-Attribute-Type.md#bool) |        |
+| `lastDisconnectTime`  |  上次通讯中断时间  | [Time](Base-Attribute-Type.md#time) |        |
+|     `commAStatus`     |   A网通讯状态   | [Bool](Base-Attribute-Type.md#bool) |        |
+| `lastADisconnectTime` | 上次A网通讯中断时间 | [Time](Base-Attribute-Type.md#time) |        |
+|     `commBStatus`     |   B网通讯状态   | [Bool](Base-Attribute-Type.md#bool) |        |
+| `lastBDisconnectTime` | 上次B网通讯中断时间 | [Time](Base-Attribute-Type.md#time) |        |
 
 </tab>
 <tab title="索引分区">
