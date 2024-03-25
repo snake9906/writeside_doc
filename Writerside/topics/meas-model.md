@@ -14,10 +14,12 @@
 <tabs>
     <tab title="维护分区">
 
-|   **属性**    | **中文名**  |               **类型**                |          **说明**          |
-|:-----------:|:--------:|:-----------------------------------:|:------------------------:|
-|   `type`    |  IED类型   | [**IEDType**](Enum-Type.md#iedtype) |          IED分类           |
-| `isVirtual` | 是否为虚拟IED | [Bool](Base-Attribute-Type.md#bool) | 虚拟IED非实采，用来存放SCADA自建的量测点 |
+|     **属性**     | **中文名**  |                   **类型**                   |          **说明**          |
+|:--------------:|:--------:|:------------------------------------------:|:------------------------:|
+|     `type`     |  IED类型   |    [**IEDType**](Enum-Type.md#iedtype)     |          IED分类           |
+|  `isVirtual`   | 是否为虚拟IED |    [Bool](Base-Attribute-Type.md#bool)     | 虚拟IED非实采，用来存放SCADA自建的量测点 |
+| `manufacturer` |   制造厂商   | [String128](Base-Attribute-Type.md#string) |      从comdb数据库同步而来       |
+| `productModel` |   产品型号   | [String128](Base-Attribute-Type.md#string) | 从comdb数据库同步而来，与制造厂商配合使用  |
 
 </tab>
 <tab title="同步分区">
@@ -81,6 +83,8 @@
 |   `lowLimitLevel2`   |     下下限值     |  [Double](Base-Attribute-Type.md#double)  |                     |
 |  `highLimitLevel3`   |    上上上限值     |  [Double](Base-Attribute-Type.md#double)  |                     |
 |   `lowLimitLevel3`   |    下下下限值     |  [Double](Base-Attribute-Type.md#double)  |                     |
+|  `ctrlUniqueCheck`   |  参与唯一性闭锁校验   |    [Bool](Base-Attribute-Type.md#bool)    |                     |
+|  `ctrlResultCheck`   |   进行控制结果校验   |    [Bool](Base-Attribute-Type.md#bool)    |                     |
 
 </tab>
 <tab title="同步分区">
@@ -119,10 +123,15 @@
 |  `RefMultiSrcSelector`  | 关联的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |          |
 |     `RefRegulating`     |         关联的[**Regulating**](meas-model.md#regulating)         |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |   关联遥调   |
 | `RefRegulatingSelector` | 关联的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |  关联遥调多源  |
+|      `RefControl`       |            关联的[**Control**](meas-model.md#control)            |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |   关联遥控   |
+|  `RefControlSelector`   | 关联的[**FeMultiSrcSelector**](meas-model.md#femultisrcselector) |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |  关联遥控多源  |
+|    `RefControlOpen`     |            关联的[**Control**](meas-model.md#control)            |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |  关联遥控分   |
+|    `RefControlClose`    |            关联的[**Control**](meas-model.md#control)            |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |  关联遥控合   |
 |        `RefBay`         |                关联的[**Bay**](Core-Model.md#bay)                |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 |    `RefVoltageLevel`    |       关联的[**VoltageLevel**](Core-Model.md#voltagelevel)       |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 |     `RefSubstation`     |         关联的[**Substation**](Core-Model.md#substation)         |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 |     `RefAuxSystem`      |       关联的[**AuxSystem**](auxi-model.md#auxiliarysystem)       |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+|      `RefAlarmCfg`      |           关联的[**AlarmCfg**](meas-model.md#alarmcfg)           |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |  关联告警配置  |
 
 </tab>
 
@@ -135,14 +144,19 @@
 <tabs>
     <tab title="维护分区">
 
-|        **属性**        | **中文名** |                  **类型**                   | **说明** |
-|:--------------------:|:-------:|:-----------------------------------------:|:------:|
-|        `type`        |  状态量类型  | [**StatusType**](Enum-Type.md#statustype) |        |
-|      `reverse`       |  是否取反   |    [Bool](Base-Attribute-Type.md#bool)    |        |
-|      `avaTime`       | 有效时限(秒) |   [ULong](Base-Attribute-Type.md#ulong)   |        |
-|   `reasonableMoni`   | 启用合理性监视 |    [Bool](Base-Attribute-Type.md#bool)    |        |
-| `reasonableMinValue` | 合理范围下值  |    [Long](Base-Attribute-Type.md#long)    |        |
-| `reasonableMaxValue` | 合理范围上值  |    [Long](Base-Attribute-Type.md#long)    |        |
+|        **属性**        |  **中文名**   |                  **类型**                   | **说明** |
+|:--------------------:|:----------:|:-----------------------------------------:|:------:|
+|        `type`        |   状态量类型    | [**StatusType**](Enum-Type.md#statustype) |        |
+|      `reverse`       |    是否取反    |    [Bool](Base-Attribute-Type.md#bool)    |        |
+|      `avaTime`       |  有效时限(秒)   |   [ULong](Base-Attribute-Type.md#ulong)   |        |
+|   `reasonableMoni`   |  启用合理性监视   |    [Bool](Base-Attribute-Type.md#bool)    |        |
+| `reasonableMinValue` |   合理范围下值   |    [Long](Base-Attribute-Type.md#long)    |        |
+| `reasonableMaxValue` |   合理范围上值   |    [Long](Base-Attribute-Type.md#long)    |        |
+|    `ctrlPriority`    |  控制方式优先级   | [CtrlPriority](Enum-Type.md#ctrlpriority) |        |
+|  `ctrlOpenReverse`   |   控分是否取反   |    [Bool](Base-Attribute-Type.md#bool)    |        |
+|  `ctrlCloseReverse`  |   控合是否取反   |    [Bool](Base-Attribute-Type.md#bool)    |        |
+| `noCtrlUniqueCheck`  | 不参与唯一性闭锁校验 |    [Bool](Base-Attribute-Type.md#bool)    |        |
+|  `ctrlResultCheck`   |  进行控制结果校验  |    [Bool](Base-Attribute-Type.md#bool)    |        |
 
 </tab>
 <tab title="同步分区">
@@ -176,6 +190,7 @@
 |   `RefVoltageLevel`   |       关联的[**VoltageLevel**](Core-Model.md#voltagelevel)       |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 |    `RefSubstation`    |         关联的[**Substation**](Core-Model.md#substation)         |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
 |    `RefAuxSystem`     |       关联的[**AuxSystem**](auxi-model.md#auxiliarysystem)       |          [**SingleRef**](Base-Attribute-Type.md#singleref)          | 方便查找上级对象 |
+|     `RefAlarmCfg`     |           关联的[**AlarmCfg**](meas-model.md#alarmcfg)           |          [**SingleRef**](Base-Attribute-Type.md#singleref)          |  关联告警配置  |
 
 </tab>
 
@@ -359,6 +374,46 @@
 |        **属性**        |                    **中文名**                    |                               **类型**                                | **说明** |
 |:--------------------:|:---------------------------------------------:|:-------------------------------------------------------------------:|:------:|
 | `ContainsFeMultiSrc` | 包含的[**FeMultiSrc**](meas-model.md#femultisrc) | [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster) |        |
+
+</tab>
+
+</tabs>
+
+## AlarmCfg
+
+告警配置表。
+
+> 用于配置状态量、模拟量告警方式，除了变化告警、越限告警配置，还包括关联的遥控、遥调告警方式配置。
+
+<tabs>
+    <tab title="维护分区">
+
+|     **属性**      | **中文名** |                           **类型**                            |         **说明**          |
+|:---------------:|:-------:|:-----------------------------------------------------------:|:-----------------------:|
+|     `name`      |   名称    |          [String64](Base-Attribute-Type.md#string)          |     使用英文，代码内部使用，不翻译     |
+|     `desc`      |   描述    |          [String64](Base-Attribute-Type.md#string)          |     使用中文，需要进行国际化处理      |
+| `ctrlOpenDesc`  |  控分描述   |          [String64](Base-Attribute-Type.md#string)          | 告警中的控分描述，使用中文，需要进行国际化处理 |
+| `ctrlCloseDesc` |  控合描述   |          [String64](Base-Attribute-Type.md#string)          | 告警中的控合描述，使用中文，需要进行国际化处理 |
+|  `contentCfg`   |  内容配置   | [**AlmContentCfg**](Self-defined-Bit-Type.md#almcontentcfg) |         告警内容配置          |
+
+</tab>
+<tab title="同步分区">
+
+无。
+
+</tab>
+<tab title="索引分区">
+
+|      **属性**       |   **中文名**   |                     **类型**                      | **说明** |
+|:-----------------:|:-----------:|:-----------------------------------------------:|:------:|
+| `RefCloseAlmItem` |   状态量合告警项   | [**CrossRef**](Base-Attribute-Type.md#crossref) |        |
+| `RefOpenAlmItem`  |   状态量分告警项   | [**CrossRef**](Base-Attribute-Type.md#crossref) |        |
+|  `RefH1AlmItem`   |  模拟量越上限告警项  | [**CrossRef**](Base-Attribute-Type.md#crossref) |        |
+|  `RefH2AlmItem`   | 模拟量越上上限告警项  | [**CrossRef**](Base-Attribute-Type.md#crossref) |        |
+|  `RefH3AlmItem`   | 模拟量越上上上限告警项 | [**CrossRef**](Base-Attribute-Type.md#crossref) |        |
+|  `RefL1AlmItem`   |  模拟量越下限告警项  | [**CrossRef**](Base-Attribute-Type.md#crossref) |        |
+|  `RefL2AlmItem`   | 模拟量越下下限告警项  | [**CrossRef**](Base-Attribute-Type.md#crossref) |        |
+|  `RefL3AlmItem`   | 模拟量越下下下限告警项 | [**CrossRef**](Base-Attribute-Type.md#crossref) |        |
 
 </tab>
 

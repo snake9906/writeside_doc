@@ -6,13 +6,13 @@ SCADA扩展的位域如下：
 
 控制校核模式
 
-| 名称           | 别名    |
-|--------------|-------|
-| NO_CHECK     | 不校核   |
-| WF_CHECK     | 五防校核  |
-| SIG_CHECK    | 信号校核  |
-| LOGIC_CHECK  | 逻辑校核  |
-| TOP_CHECK    | 拓扑校核  |
+| 名称          | 别名   |
+|-------------|------|
+| NO_CHECK    | 不校核  |
+| WF_CHECK    | 五防校核 |
+| SIG_CHECK   | 信号校核 |
+| LOGIC_CHECK | 逻辑校核 |
+| TOP_CHECK   | 拓扑校核 |
 
 #### MoniStatus
 
@@ -134,4 +134,22 @@ SCADA扩展的位域如下：
 | OVER_H2     | 越上上限  |                |
 | OVER_H3     | 越上上上限 |                |
 
+#### AlmContentCfg
 
+告警内容组成方式
+
+| 名称        | 别名    | 说明            |
+|-----------|-------|---------------|
+| AREA      | 地区    | 是否拼接地区名称，下面类似 |
+| SUB       | 厂站    |               |
+| VOL       | 电压等级  |               |
+| BAY       | 间隔    |               |
+| IED       | IED   |               |
+| EQUIP     | 一次设备  |               |    
+| AUX_SYS   | 辅控系统  |               |
+| AUX_AREA  | 辅控区域  |               |
+| AUX_EQUIP | 辅控设备  |               |
+| ESS_UNIT  | 储能单元  |               |
+| ESS_PCS   | 储能逆变器 |               |
+| ESS_BCMU  | 储能电池簇 |               |
+| MEAS_TYPE | 测点类型  |               |
