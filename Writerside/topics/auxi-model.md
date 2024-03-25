@@ -38,7 +38,7 @@
 |       `ContainsRegion`       |             包含的[**Region**](auxi-model.md#region)             | [**ASymbInlineDlistMaster**](Base-Attribute-Type.md#asymbinlinedlistmaster) |        |
 |  `ContainsRegionCoordinate`  |   包含的[**RegionCoordinate**](auxi-model.md#regioncoordinate)   |     [**SymbSeqArrayMaster**](Base-Attribute-Type.md#symbseqarraymaster)     |        |
 | `ContainsAuxiliaryEquipment` | 包含的[**AuxiliaryEquipment**](auxi-model.md#auxiliaryequipment) |    [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster)    |        |
-|    `ContainsESContainer`     |        包含的[**ESContainer**](ess-model.md#escontainer)         |    [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster)    |        |
+|       `ContainsESUnit`       |             包含的[**ESUnit**](ess-model.md#esunit)              |    [**ASymbSeqDlistMaster**](Base-Attribute-Type.md#asymbseqdlistmaster)    |        |
 
 </tab>
 
