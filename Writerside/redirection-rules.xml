@@ -50,4 +50,8 @@
         <description>Created after removal of "Tutorial" from SCADA帮助文档</description>
         <accepts>Tutorial.html</accepts>
     </rule>
+    <rule id="7e411691">
+        <description>Created after removal of "Empty MD Topic" from SCADA帮助文档</description>
+        <accepts>Empty-MD-Topic.html</accepts>
+    </rule>
 </rules>

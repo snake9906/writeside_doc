@@ -29,6 +29,7 @@
             <toc-element topic="ess-model.md"/>
         </toc-element>
         <toc-element topic="SCADA-server.md">
+            <toc-element topic="gui-query-server.md"/>
             <toc-element topic="acq-server.md">
             </toc-element>
             <toc-element topic="moni-server.md"/>
